@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#landing-page {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	align-items: center;
+
+}
+
+.video-container {
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	top: 0;
+	left: 0;
+	width: 100%;
+	opacity: 0.9;
+}
+
+#row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.video-container video {
+	object-fit: cover;
+}
+
+#slogan-group {
+	font-family: Calibri, sans-serif;
+	color: white;
+	z-index: 1;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+#landing-page .container {
+font-family: 'Titillium Web', sans-serif;
+z-index: 1;
+color: #fff;
+display: flex;
+flex-wrap: wrap;
+
+}
+
+
+#landing-page h1 {
+	color: yellowgreen;
+}
+
+#landing-page p {
+	font-size: 1.5rem;
+}
+
+#foot , #copyright {
+	justify-content: center;
+}
+
+
+/*#foot {
+	font-size: 1.75rem; 
+}*/
+
+footer {
+	text-align: center;
+	background-color: #fff;
+  border-top-style: solid;
+   border-top-width: 5px ;
+   border-top-color: #6dccde;
+   height: 10vh;
+   line-height: 10vh;
+}
+
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+#html	{
+	background-image: url("../images/html.png");
+}
+
+#css {
+	background-image: url("../images/css.png");
+}
+
+#bs {
+	background-image: url("../images/bootstrap.png");
+}
+
+#gitlab {
+	background-image: url("../images/gitlab.png");
+}
+
+#google {
+	background-image: url("../images/google.jpeg");
+}
+
+#profile-picture {
+	background-image: url("../images/profile_pic.jpg");
+	height: 50vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+#main-section{
+	background-color: #fff;
+	padding: 70px 50px;
+}
+
+.tech-stack {
+	height: 100px;
+	margin-top: 15px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#skill , #prof-pic {
+	text-align: center;
+	justify-content: center;
+}
+
+
+
