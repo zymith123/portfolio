@@ -2,116 +2,169 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Main Section</title>
-	<link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png">
-	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<title>Landing Section</title>
+  	<link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png">
+   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+  	<link rel="preconnect" href="https://fonts.gstatic.com">
+  	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  
+   	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
-	<div id="main-section" class="container">
-		<div class="row" id="prof-pic">
-			<div id="profile-picture" class="col-12"></div>
-		
-			<div id="skill" class="col-md-6">
 
-				<h2>Tech I've Built With</h2>
-				<div class="row" id="programs">
-					<div class="col-6 col-md-4">
-						<div id="html" class="tech-stack"></div>
-					</div>
-					<div class="col-6 col-md-4">
-						<div id="css" class="tech-stack"></div>
-					</div>
-					<div class="col-6 col-md-4">
-						<div id="bs" class="tech-stack"></div>
-					</div>
-					<div class="col-6 col-md-4">
-						<div id="gitlab" class="tech-stack"></div>
-					</div>
-					<div class="col-6 col-md-4">
-						<div id="google" class="tech-stack"></div>
-					</div>
-				</div> <!-- end for row -->
-				
-			</div><!-- end for skill-->	
-			<div id="about-me" class="col-md-6">
-				<h1 class="text-center my-4">About Me</h1>
-				<p>
-				Hi, my name is Jerwin Babatugon. I graduated college from Cebu Institute of Technology - University. I am Full Stack Web Developer located in Cebu City, Philippines. I am a coffee lover and can't live without it. I have enjoyed very much working as a programmer and love to provide assistance to the companies that need my help.  I am meticulous in everything I do. I am trustworthy, respectful of deadlines, and want us both to be proud of the work being done. If you have the work available, I am ready to work with you!
-				</p>
-				
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href=""><img src="./assets/images/favicon.png" alt="logo">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    		<span class="navbar-toggler-icon"></span>
+	 		</button>
+
+		  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  		<ul class="navbar-nav ml-auto">
+		    		<li class="nav-item active">
+		        		<a class="nav-link" href="./index.html">Home</a>
+		      		</li>
+			  	  	<li class="nav-item">
+			   		 	<a class="nav-link" href="./main.html">About</a>
+			   		</li>
+			 	    <li class="nav-item">
+			        	<a class="nav-link" href=#portfolio-section>Portfolio</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link" href=#contact-form>Contact</a>
+			      	</li>
+		    	</ul>
+		  	</div>
+		</div>
+	 
+	</nav>
+	<div id="main-section" class="jumbotron jumbotron-fluid" >
+		<div class="container">	
+
+			<div class="row" id="profile">
+				<div class="col-12" id="prof_pic_container">
+					<img src="./assets/images/profile_pic.jpg" id="profile-picture">
+				</div>
+				<div id="skill" class="col-md-6">
+
+					<h2>Tech I've Built With</h2>
+					<div class="row" id="programs">
+						<div class="col-6 col-md-4">
+							<div id="html" class="tech-stack"></div>
+						</div>
+						<div class="col-6 col-md-4">
+							<div id="css" class="tech-stack"></div>
+						</div>
+						<div class="col-6 col-md-4">
+							<div id="bs" class="tech-stack"></div>
+						</div>
+						<div class="col-6 col-md-4">
+							<div id="gitlab" class="tech-stack"></div>
+						</div>
+						<div class="col-6 col-md-4">
+							<div id="google" class="tech-stack"></div>
+						</div>
+					</div> <!-- end for row -->
+					
+				</div><!-- end for skill-->	
+				<div id="about-me" class="col-md-6">
+					<h1 class="text-center my-4">About Me</h1>
+					<p>
+					Hi, my name is Jerwin Babatugon. I graduated college from Cebu Institute of Technology - University. I am Full Stack Web Developer located in Cebu City, Philippines. I am a coffee lover and can't live without it. I have enjoyed very much working as a programmer and love to provide assistance to the companies that need my help.  I am meticulous in everything I do. I am trustworthy, respectful of deadlines, and want us both to be proud of the work being done. If you have the work available, I am ready to work with you!
+					</p>
+					
+				</div>
+			</div><!-- end for row -->	
+			<div class="video-container">
+					
+					<video autoplay muted loop id="background_profile">
+						<source class="embed-responsive-item" src="./assets/videos/numbers.mp4" type="video/mp4">		
+					</video>	
 			</div>
-		</div><!-- end for row -->	
-	
-		
+			<div class="overlay" id="main_overlay_profile">	
+			</div>
+		</div>	
 	</div> <!-- end of row -->
-	<div id="portfolio-section" class="container">
-		<div class="row text-center">
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top img-fluid" src="./assets/image2/html_thumbnail.png" alt="HTML codes">
-				<div class="card-body">
-					<h5 class="text-center card-title">HTML</h5>
-					<p class="card-text"> Output example of an HTML code only</p>
-					<div class="text-center">
-						<a href="./assets/image2/html_portfolio.png" target="_blank" class="btn btn-primary">Come Peek Inside</a>
+	<div id="portfolio-section" class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-12 text-center">
+					<h2 id="portfolio-title">PORTFOLIO</h2>
+				</div>
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top img-fluid" src="./assets/image2/html_thumbnail.png" alt="HTML codes">
+					<div class="card-body">
+						<h5 class="text-center card-title">HTML</h5>
+						<p class="card-text"> Output example of an HTML code only</p>
+						<div class="text-center">
+							<a href="./assets/image2/html_portfolio.png" target="_blank" class="btn btn-primary">Come Peek Inside</a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top img-fluid" src="./assets/image2/css_thumbnail.png" alt="CSS codes">
-				<div class="card-body">
-					<h5 class="text-center card-title">HTML & CSS</h5>
-					<p class="card-text"> A coded output using HTML and CSS</p>
-					<div class="text-center">
-						<a href="./assets/image2/css_portfolio.png" target="_blank" class="btn btn-primary">Come Peek Inside</a>
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top img-fluid" src="./assets/image2/css_thumbnail.png" alt="CSS codes">
+					<div class="card-body">
+						<h5 class="text-center card-title">HTML & CSS</h5>
+						<p class="card-text"> A coded output using HTML and CSS</p>
+						<div class="text-center">
+							<a href="./assets/image2/css_portfolio.png" target="_blank" class="btn btn-primary">Come Peek Inside</a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top img-fluid" src="./assets/image2/bootstrap_thumbnail.png" alt="Bootstrap codes">
-				<div class="card-body">
-					<h5 class="text-center card-title">HTML, CSS, & Bootstrap</h5>
-					<p class="card-text"> A coded output using Bootstrap as an additional language.</p>
-					<div class="text-center">
-						<a href="assets/image2/bootstrap_portfolio.png" target="_blank" class="btn btn-primary">Come Peek Inside</a>
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top img-fluid" src="./assets/image2/bootstrap_thumbnail.png" alt="Bootstrap codes">
+					<div class="card-body">
+						<h5 class="text-center card-title">HTML, CSS, & Bootstrap</h5>
+						<p class="card-text"> A coded output using Bootstrap as an additional language.</p>
+						<div class="text-center">
+							<a href="assets/image2/bootstrap_portfolio.png" target="_blank" class="btn btn-primary">Come Peek Inside</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="contact-section" class="container">
-		<div class="text-center" id="map-section">
-				<h3 class="text-center">Visit Us</h3>
-				<p class="text-center"> @ 12,Asiatown IT Park, Cebu City, 6000 Cebu</p>
-				<div class="iframe-container">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3183.6198702789343!2d123.9053387394003!3d10.329091493979542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9992199542bbd%3A0x818485133187ec81!2sStarbucks!5e0!3m2!1sen!2sph!4v1604544656293!5m2!1sen!2sph" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0" id="gmap" frameborder="0" allowfullscreen="" aria-hidden="false" class="responsive-iframe"></iframe>
-				</div>
+	<div id="contact-section" class="jumbotron jumbotron-fluid">
+		<div class="">
+			<div class="text-center" id="map-section">
+					<h3 class="text-center">Visit Us</h3>
+					<p class="text-center"> @ 12,Asiatown IT Park, Cebu City, 6000 Cebu</p>
+					<div class="iframe-container">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3183.6198702789343!2d123.9053387394003!3d10.329091493979542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9992199542bbd%3A0x818485133187ec81!2sStarbucks!5e0!3m2!1sen!2sph!4v1604544656293!5m2!1sen!2sph" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0" id="gmap" frameborder="0" allowfullscreen="" aria-hidden="false" class="responsive-iframe"></iframe>
+					</div>
+			</div>
+			<div class="row justify-content-center" id="contact-form">
+				<h3 class="text-center col-12" id="contact-heading">Interested? Contact NOW!</h3>
+				<form class="col-md-6" id="form">
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="your-name">Your Name</label>
+							<input type="text" name="name" id="your-name" class="form-control" placeholder="Enter name here">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" class="form-control" placeholder="Enter email here.">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label for="comment">Enter Your Message</label>
+							<textarea type="comment" name="comment" id="comment" class="form-control" placeholder="Enter your message here." rows="3"></textarea>
+						</div>
+					</div>	
+					<div class="row" id="contain-button">
+						<button id="button" class="btn btn-primary">Submit</button>
+					</div>
+				</form>
+			</div>	
 		</div>
-		<div class="row">
-			<h3 class="text-center col-12">Interested? Contact me NOW!</h3>
-			<form class="col-12" id="form">
-				<div class="form-group col-md-6">
-					<label for="email">Email Address:</label>
-					<input type="email" name="email" id="email" class="form-control" placeholder="Enter Email Here.">
-				</div>
-				<div class="form-group col-md-6">
-					<label for="comment">Comment:</label>
-					<textarea type="comment" name="comment" id="comment" class="form-control" placeholder="Enter Comment Here." rows="3"></textarea>
-				</div>
-				<button id="button" class="btn btn-primary">Submit</button>
-			</form>
-		</div>	
-	</div> <!-- end of col-6 -->
+	</div>  <!--end of col-6-->
 
-	<!-- <div class="video-container">
-				
-				<video autoplay muted loop id="bg1">
-					<source class="embed-responsive-item" src="./assets/videos/numbers.mp4" type="video/mp4">		
-				</video>
-	</div> -->
 
 	<footer class="page-footer font-small pt-4">
 		<div id="footer"class="container-fluid text-center">
@@ -134,10 +187,10 @@
 			</div>
 		</div>
 		<div class="col-md-12 mx-auto" id="copyright">
-			<p>&copy; Jerwin Babatugon Full | Stack Developer</p>
+			<p>&copy; Jerwin Babatugon | Full-Stack Developer 2020</p>
 		</div>
 		</div>
-	</footer>
+	</footer> 
 
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
