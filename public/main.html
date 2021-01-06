@@ -13,6 +13,9 @@
    	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   
    	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+   	<script  src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 <body>
 
@@ -69,13 +72,22 @@
 						<div class="col-6 col-md-4">
 							<div id="google" class="tech-stack"></div>
 						</div>
+						<div class="col-6 col-md-4">
+							<div id="javascript" class="tech-stack"></div>
+						</div>
+						<div class="col-6 col-md-4">
+							<div id="mongodb" class="tech-stack"></div>
+						</div>
+						<div class="col-6 col-md-4">
+							<div id="expressjs" class="tech-stack"></div>
+						</div>
 					</div> <!-- end for row -->
 					
 				</div><!-- end for skill-->	
 				<div id="about-me" class="col-md-6">
 					<h1 class="text-center my-4">About Me</h1>
 					<p>
-					Hi, my name is Jerwin Babatugon. I graduated college from Cebu Institute of Technology - University. I am Full Stack Web Developer located in Cebu City, Philippines. I am a coffee lover and can't live without it. I have enjoyed very much working as a programmer and love to provide assistance to the companies that need my help.  I am meticulous in everything I do. I am trustworthy, respectful of deadlines, and want us both to be proud of the work being done. If you have the work available, I am ready to work with you!
+					Hi, my name is Jerwin Babatugon. I graduated college from Cebu Institute of Technology - University. I am Full Stack Web Developer located in Surigao City, Philippines. I am a coffee lover and can't live without it. I have enjoyed very much working as a programmer and love to provide assistance to the companies that need my help.  I am meticulous in everything I do. I am trustworthy, respectful of deadlines, and want us both to be proud of the work being done. If you have the work available, I am ready to work with you!
 					</p>
 					
 				</div>
@@ -94,38 +106,67 @@
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-12 text-center">
-					<h2 id="portfolio-title">PORTFOLIO</h2>
+						<h2 id="portfolio-title">PORTFOLIO</h2>
 				</div>
-				<div class="card" style="width: 18rem;">
-					<img class="card-img-top img-fluid" src="./assets/image2/html_thumbnail.png" alt="HTML codes">
-					<div class="card-body">
-						<h5 class="text-center card-title">HTML</h5>
-						<p class="card-text"> Output example of an HTML code only</p>
-						<div class="text-center">
-							<a href="./assets/image2/html_portfolio.png" target="_blank" class="btn btn-primary">Come Peek Inside</a>
+			</div>
+			<div class="slider owl-carousel">	
+					<div class="card">
+						<div class="img"><img class="card-img-top img-fluid" src="./assets/image2/html_thumbnail.png" alt="HTML codes"></div>
+						<div class="card-body">
+							<h5 class="text-center card-title">HTML</h5>
+							<p class="card-text"> Code and output example of a HTML language.</p>
+							<div class="text-center">
+								<a class="btn btn-primary" id="btn-for-HTML">Come Peek Inside</a>
+								<ul id="code-or-output-for-html">
+									<li><a href="https://gitlab.com/zymith1234/html-portfolio/-/blob/master/public/index.html" target="_blank">Code</a></li>
+									<li><a href="https://zymith1234.gitlab.io/html-portfolio/" target="_blank">Output</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="card" style="width: 18rem;">
-					<img class="card-img-top img-fluid" src="./assets/image2/css_thumbnail.png" alt="CSS codes">
-					<div class="card-body">
-						<h5 class="text-center card-title">HTML & CSS</h5>
-						<p class="card-text"> A coded output using HTML and CSS</p>
-						<div class="text-center">
-							<a href="./assets/image2/css_portfolio.png" target="_blank" class="btn btn-primary">Come Peek Inside</a>
+					<div class="card" id="secondCard">
+						<div class="img"><img class="card-img-top img-fluid" src="./assets/image2/css_thumbnail.png" alt="CSS codes"></div>
+						<div class="card-body">
+							<h5 class="text-center card-title">HTML & CSS</h5>
+							<p class="card-text"> Code and Output using HTML and CSS</p>
+							<div class="text-center">
+								<a class="btn btn-primary" id="btn-for-css">Come Peek Inside</a>
+								<ul id="portfolio-for-css">
+									<li><a href="https://gitlab.com/zymith1234/css-portfolio/-/tree/master/public" target="_blank">Code</a></li>
+									<li><a href="https://zymith1234.gitlab.io/css-portfolio/" target="_blank">Output</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="card" style="width: 18rem;">
-					<img class="card-img-top img-fluid" src="./assets/image2/bootstrap_thumbnail.png" alt="Bootstrap codes">
-					<div class="card-body">
-						<h5 class="text-center card-title">HTML, CSS, & Bootstrap</h5>
-						<p class="card-text"> A coded output using Bootstrap as an additional language.</p>
-						<div class="text-center">
-							<a href="assets/image2/bootstrap_portfolio.png" target="_blank" class="btn btn-primary">Come Peek Inside</a>
+					<div class="card" id="thirdCard">
+						<div class="img"><img class="card-img-top img-fluid" src="./assets/image2/bootstrap_thumbnail.png" alt="Bootstrap codes"></div>
+						<div class="card-body">
+							<h5 class="text-center card-title">HTML, CSS, & Bootstrap</h5>
+							<p class="card-text"> Code and output using Bootstrap as an additional language.</p>
+							<div class="text-center">
+								<a class="btn btn-primary" id="btn-for-bootstrap">Come Peek Inside</a>
+								<ul id="portfolio-for-bootstrap">
+									<li><a href="https://gitlab.com/zymith1234/bootstrap-portfolio/-/blob/master/public/index.html" target="_blank">Code</a></li>
+									<li><a href="https://zymith1234.gitlab.io/bootstrap-portfolio/" target="_blank">Output</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
+					<div class="card" id="fourthCard">
+						<div class="img"><img class="card-img-top img-fluid" src="./assets/image2/express.jpg" alt="Javascript codes"></div>
+						<div class="card-body">
+							<h5 class="text-center card-title">Express.js</h5>
+							<p class="card-text">A Booking System API Integration using HTML, CSS, Bootstrap, Javascript, MongoDB, and Node.js</p>
+							<div class="text-center">
+								<a class="btn btn-primary" id="btn-for-express">Come Peek Inside</a>
+								<ul id="portfolio-for-express">
+									<li><a href="https://gitlab.com/zymith1234/capstone2-babatugon" target="_blank">Code</a></li>
+									<li><a href="https://zymith1234.gitlab.io/capstone2-babatugon/" target="_blank">Output</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				
 			</div>
 		</div>
 	</div>
@@ -133,9 +174,9 @@
 		<div class="">
 			<div class="text-center" id="map-section">
 					<h3 class="text-center">Visit Us</h3>
-					<p class="text-center"> @ 12,Asiatown IT Park, Cebu City, 6000 Cebu</p>
+					<p class="text-center"> @ near Provincial Common Services Center, Surigao City, 8400 Surigao del Norte</p>
 					<div class="iframe-container">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3183.6198702789343!2d123.9053387394003!3d10.329091493979542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9992199542bbd%3A0x818485133187ec81!2sStarbucks!5e0!3m2!1sen!2sph!4v1604544656293!5m2!1sen!2sph" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0" id="gmap" frameborder="0" allowfullscreen="" aria-hidden="false" class="responsive-iframe"></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d982.955454917479!2d125.4900824291841!3d9.78113949956259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33013746c8188663%3A0x41d88939cb4e83ec!2sProvincial%20Common%20Services%20Center!5e0!3m2!1sen!2sph!4v1609319387994!5m2!1sen!2sph" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0" id="gmap" frameborder="0" allowfullscreen="" aria-hidden="false" class="responsive-iframe"></iframe>
 					</div>
 			</div>
 			<div class="row justify-content-center" id="contact-form">
@@ -192,8 +233,93 @@
 		</div>
 	</footer> 
 
+	<script>
+
+
+		var peekBtnHTML = document.querySelector('#btn-for-HTML');
+		var portfolioHTML = document.querySelector("#code-or-output-for-html");
+		var peekBtnCSS = document.querySelector('#btn-for-css');
+		var portfolioCSS = document.querySelector("#portfolio-for-css");
+		var peekBtnBootstrap = document.querySelector('#btn-for-bootstrap');
+		var portfolioBootstrap = document.querySelector("#portfolio-for-bootstrap");
+		var peekBtnExpress = document.querySelector('#btn-for-express');
+		var portfolioExpress = document.querySelector("#portfolio-for-express");
+
+		peekBtnHTML.addEventListener('click',()=>{
+   			if (portfolioHTML.style.display!="block"){
+      			portfolioHTML.style.display="block";
+      			portfolioCSS.style.display="none";
+      			portfolioBootstrap.style.display="none";
+   			} else {
+      			portfolioHTML.style.display="none";
+   			}
+		})
+
+		peekBtnCSS.addEventListener('click',()=>{
+   			if (portfolioCSS.style.display!="block"){
+      			portfolioCSS.style.display="block";
+      			portfolioHTML.style.display="none";
+      			portfolioBootstrap.style.display="none";
+   			} else {
+      			portfolioCSS.style.display="none";
+   			}
+		})
+
+		peekBtnBootstrap.addEventListener('click',()=>{
+   			if (portfolioBootstrap.style.display!="block"){
+      			portfolioBootstrap.style.display="block";
+      			portfolioHTML.style.display="none";
+      			portfolioCSS.style.display="none";
+   			} else {
+      			portfolioBootstrap.style.display="none";
+   			}
+		})
+
+		peekBtnExpress.addEventListener('click',()=>{
+   			if (portfolioExpress.style.display!="block"){
+      			portfolioExpress.style.display="block";
+      			portfolioHTML.style.display="none";
+      			portfolioCSS.style.display="none";
+      			portfolioBootstrap.style.display="none";
+   			} else {
+      			portfolioExpress.style.display="none";
+   			}
+		})
+
+		window.onclick = function(event) {
+ 			if (!event.target.matches('#btn-for-HTML') && !event.target.matches('#btn-for-css') && !event.target.matches('#btn-for-bootstrap') && !event.target.matches('#btn-for-express')) {
+    			portfolioHTML.style.display="none";
+    			portfolioCSS.style.display="none";
+    			portfolioBootstrap.style.display="none";
+    			portfolioExpress.style.display="none";
+    		}
+    	}
+
+		$(".slider").owlCarousel({
+			loop: false,
+			autoplay: true,
+			autoplayTimeout: 4000,
+			autoplayHoverPause: true,
+			responsive: {
+				0:{
+					items: 1,
+					nav: false
+				},
+				600:{
+					items: 2,
+					nav: false
+				},
+				1000:{
+					items: 3,
+					nav: false
+				},
+			}
+		});
+
+	</script>
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	
 </body>
 </html>
