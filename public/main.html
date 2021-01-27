@@ -81,6 +81,9 @@
 						<div class="col-6 col-md-4">
 							<div id="expressjs" class="tech-stack"></div>
 						</div>
+						<div class="col-6 col-md-4">
+							<div id="nextjs" class="tech-stack"></div>
+						</div>
 					</div> <!-- end for row -->
 					
 				</div><!-- end for skill-->	
@@ -166,6 +169,20 @@
 							</div>
 						</div>
 					</div>
+					<div class="card" id="fifthCard">
+						<div class="img"><img class="card-img-top img-fluid" src="./assets/image2/nextjs-thumbnail.png" alt="nextjs porfolio"></div>
+						<div class="card-body">
+							<h5 class="text-center card-title">Next.js</h5>
+							<p class="card-text">A Budget Tracking App with different features like Google Login and Charts. This project was built by 2 persons.
+							<div class="text-center">
+								<a class="btn btn-primary" id="btn-for-nextjs">Come Peek Inside</a>
+								<ul id="portfolio-for-nextjs">
+									<li><a href="https://gitlab.com/zymith1234/capstone3-frontend-final" target="_blank">Code</a></li>
+									<li><a href="https://capstone3-frontend-final.vercel.app/" target="_blank">Output</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				
 			</div>
 		</div>
@@ -244,12 +261,16 @@
 		var portfolioBootstrap = document.querySelector("#portfolio-for-bootstrap");
 		var peekBtnExpress = document.querySelector('#btn-for-express');
 		var portfolioExpress = document.querySelector("#portfolio-for-express");
+		var peekBtnNextJs = document.querySelector('#btn-for-nextjs');
+		var portfolioNextJs = document.querySelector("#portfolio-for-nextjs");
 
 		peekBtnHTML.addEventListener('click',()=>{
    			if (portfolioHTML.style.display!="block"){
       			portfolioHTML.style.display="block";
       			portfolioCSS.style.display="none";
       			portfolioBootstrap.style.display="none";
+      			portfolioNextJs.style.display="none";
+      			portfolioExpress.style.display="none";
    			} else {
       			portfolioHTML.style.display="none";
    			}
@@ -260,6 +281,8 @@
       			portfolioCSS.style.display="block";
       			portfolioHTML.style.display="none";
       			portfolioBootstrap.style.display="none";
+      			portfolioNextJs.style.display="none";
+      			portfolioExpress.style.display="none";
    			} else {
       			portfolioCSS.style.display="none";
    			}
@@ -270,6 +293,8 @@
       			portfolioBootstrap.style.display="block";
       			portfolioHTML.style.display="none";
       			portfolioCSS.style.display="none";
+      			portfolioNextJs.style.display="none";
+      			portfolioExpress.style.display="none";
    			} else {
       			portfolioBootstrap.style.display="none";
    			}
@@ -281,8 +306,21 @@
       			portfolioHTML.style.display="none";
       			portfolioCSS.style.display="none";
       			portfolioBootstrap.style.display="none";
+      			portfolioNextJs.style.display="none";
    			} else {
       			portfolioExpress.style.display="none";
+   			}
+		})
+
+		peekBtnNextJs.addEventListener('click',()=>{
+   			if (portfolioNextJs.style.display!="block"){
+      			portfolioNextJs.style.display="block";
+      			portfolioHTML.style.display="none";
+      			portfolioCSS.style.display="none";
+      			portfolioBootstrap.style.display="none";
+      			portfolioExpress.style.display="none";
+   			} else {
+      			portfolioNextJs.style.display="none";
    			}
 		})
 

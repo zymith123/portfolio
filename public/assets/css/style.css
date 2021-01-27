@@ -331,6 +331,9 @@ footer {
 	background-image: url("../images/expressjs2.png");
 }
 
+#nextjs {
+	background-image: url("../images/nextjs.png");
+}
 
 #portfolio-section .card .card-body ul , #portfolio-for-css {
 	display: none;
