@@ -76,6 +76,15 @@
 	--container-color: hsl(var(--hue-color), 29%, 16%);
 	--scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
 	--scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+	.scroll-header {
+		box-shadow: 0 -1px 4px rgba(255, 255, 255, 0.55);
+	};
+	.swiper-pagination-bullet {
+		background: #fff;
+	};
+	.swiper-pagination-bullet-active {
+		background: var(--first-color);
+	};
  }
 
  /* ===== Button Dark/Light ===== */
@@ -250,7 +259,7 @@ img{
 
 /* ===== Change background header =====*/
 .scroll-header {
-	box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.75);
 }
 
 
@@ -283,6 +292,10 @@ img{
 .home_blob {
 	width: 200px;
 	fill: var(--first-color);
+	.home_blob-img {
+		width: 100%;
+		transform: translateY(-30%);	
+	}
 }
 
 .home_data {
@@ -388,6 +401,7 @@ img{
 .about_description {
 	text-align: center;
 	margin-bottom: var(--mb-2-5);
+	text-indent: 2rem;
 }
 
 .about_info {
@@ -482,16 +496,30 @@ img{
 }
 
 .skills_html {
-	width: 60%;
+	width: 90%;
 }
 
 .skills_css {
-	width: 60%;
+	width: 80%;
 }
 
 .skills_react {
 	width: 40%;
 }
+
+.skills_angular {
+	width: 60%;
+}
+
+.skills_vue, .skills_nuxt {
+	width: 80%;
+}
+
+.skills_quasar {
+	width: 70%;
+}
+
+
 
 .skills_github {
 	width: 30%;
@@ -1079,6 +1107,10 @@ section {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
+	.skills_container2 {
+		column-gap: 1rem;
+	}
+
 	.qualification_sections {
 		display: grid;
 		grid-template-columns: 0.6fr
@@ -1186,6 +1218,10 @@ section {
 
 	.qualification_button {
 		margin: 0 var(--mb-1);
+	}
+
+	.qualification_button:nth-of-type(1) {
+		transform: translateX(-3rem);
 	}
 
 	.qualification_sections {
