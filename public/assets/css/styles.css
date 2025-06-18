@@ -502,6 +502,7 @@ img{
 	width: 90%;
 }
 
+<<<<<<< HEAD
 .skills_vue, .skills_nuxt, .skills_css, .skills_play {
 	width: 80%;
 }
@@ -512,6 +513,56 @@ img{
 
 .skills_angular, .skills_react, .skills_node, .skills_express, .skills_mongodb {
 	width: 60%;
+=======
+.skills_css {
+	width: 80%;
+}
+
+.skills_react {
+	width: 40%;
+}
+
+.skills_angular {
+	width: 60%;
+}
+
+.skills_vue, .skills_nuxt {
+	width: 80%;
+}
+
+.skills_quasar {
+	width: 70%;
+}
+
+
+
+.skills_github {
+	width: 30%;
+}
+
+.skills_node {
+	width: 30%;
+}
+
+.skills_mongoose {
+	width: 30%;
+}
+
+.skills_gitlab {
+	width: 40%;
+}
+
+.skills_sql {
+	width: 30%;
+}
+
+.skills_python {
+	width: 30%;
+}
+
+.skills_java {
+	width: 30%;
+>>>>>>> d60904647201f99e452cc265031847d945aba508
 }
 
 .skills_close .skills_list {
@@ -1204,7 +1255,11 @@ section {
 	}
 
 	.services_content {
+<<<<<<< HEAD
 		padding: 2rem 0 2rem 2.5rem;
+=======
+		padding: 6rem 0 2rem 2.5rem;
+>>>>>>> d60904647201f99e452cc265031847d945aba508
 	}
 
 	.services_modal-content{
