@@ -727,6 +727,24 @@ img{
 	transform: translateX(0.25rem);
 }
 
+.button_icon {
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+  transition: transform 0.3s;
+}
+
+.code-link-btn {
+	cursor:pointer; 
+	background-color: var(--first-color); 
+	color: #FFF; 
+	border-radius: 0.5rem; 
+	padding: 1px 7px;
+}
+
+.code-link-btn:hover {
+	background-color: var(--first-color-alt);
+}
+
 .swiper-button-prev::after, .swiper-button-next::after {
 	content: '';
 }
