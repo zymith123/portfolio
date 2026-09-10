@@ -1,0 +1,15 @@
+{
+  "name": "Jerwin Babatugon — Software Developer & AI Automation Builder",
+  "short_name": "Jerwin Babatugon",
+  "description": "Software developer building production web apps and practical AI automations.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0c0f",
+  "theme_color": "#0b0c0f",
+  "icons": [
+    { "src": "assets/img/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "assets/img/favicon-32.png", "type": "image/png", "sizes": "32x32" },
+    { "src": "assets/img/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" }
+  ]
+}

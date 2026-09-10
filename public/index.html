@@ -1,832 +1,758 @@
 <!DOCTYPE html>
-	<html lang="en">
-		<head>
-			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			
-			<!-- Unicons -->
-			<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-			
-			<!-- Swiper CSS -->
-			<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-			
-			<!-- CSS -->
-			<link rel="stylesheet" href="./assets/css/styles.css">
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-			<title>Jerwin Babatugon</title>
-		</head>
-		<body>
-			<!-- Header -->
-			<header class="header" id="header">
-				<nav class="nav container">
-					<a href="#" class="nav_logo">Jerwin</a>
-					<div class="nav_menu" id="nav-menu">
-						<ul class="nav_list grid">
-							<li class="nav_item">
-								<a href="#home" class="nav_link active-link home_nav">
-									<i class="uil uil-house-user nav_icon"></i> Home
-								</a>
-							</li>
-							<li class="nav_item">
-								<a href="#about" class="nav_link about_nav">
-									<i class="uil uil-user nav_icon"></i> About
-								</a>
-							</li>
-							<li class="nav_item">
-								<a href="#skills" class="nav_link skills_nav">
-									<i class="uil uil-file-info-alt nav_icon skills_nav"></i> Skills
-								</a> 
-							</li>
-							<li class="nav_item">
-								<a href="#services" class="nav_link services_nav">
-									<i class="uil uil-bag nav_icon"></i> Services
-								</a>
-							</li>
-							<li class="nav_item">
-								<a href="#portfolio" class="nav_link portfolio_nav">
-									<i class="uil uil-shutter-alt nav_icon"></i> Portfolio
-								</a> 
-							</li>
-							<li class="nav_item">
-								<a href="#contact" class="nav_link contact_nav">
-									<i class="uil uil-comment-heart nav_icon"></i>Contact Me
-								</a> 
-							</li>
-						</ul>
-						<i class="uil uil-times nav_close" id="nav-close"></i>
-					</div>
-					<div class="nav_btns">
-						<!-- =====Theme change button===== -->
-						<i class="uil uil-moon change-theme" id="theme-button"></i>
+  <title>Jerwin Babatugon — Software Developer &amp; AI Automation Builder</title>
+  <meta name="description" content="Jerwin Babatugon is a software developer in the Philippines building production web apps with Next.js, React, Node.js and NestJS, and practical AI automations with n8n. Open to remote roles and automation projects.">
+  <meta name="author" content="Jerwin Babatugon">
+  <link rel="canonical" href="https://zymith1234.gitlab.io/jerwin-full-stack-dev/">
 
-						<div class="nav_toggle" id="nav-toggle">
-							<i class="uil uil-apps"></i>
-						</div>
-					</div>
-					
-				</nav>
-			</header>
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="color-scheme" content="dark light">
 
-			<!-- Main -->
-			<main class="main">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jerwin Babatugon">
+  <meta property="og:title" content="Jerwin Babatugon — Software Developer &amp; AI Automation Builder">
+  <meta property="og:description" content="Software developer building production web apps with Next.js, React, Node.js and NestJS — and practical AI automations with n8n, APIs and webhooks.">
+  <meta property="og:url" content="https://zymith1234.gitlab.io/jerwin-full-stack-dev/">
+  <meta property="og:image" content="https://zymith1234.gitlab.io/jerwin-full-stack-dev/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jerwin Babatugon — Software Developer &amp; AI Automation Builder">
+  <meta name="twitter:description" content="Software developer building production web apps and practical AI automations.">
+  <meta name="twitter:image" content="https://zymith1234.gitlab.io/jerwin-full-stack-dev/assets/img/og-image.jpg">
 
-				<!-- Home -->
-				<section class="home section" id="home">
-					<div class="home_container container grid">
-						<div class="home_content grid">
-							<div class="home_social">
-								<a href="https://www.linkedin.com/in/jerwin-babatugon-051a721a9/" target="_blank" class="home_social-icon">
-									<i class="uil uil-linkedin"></i>
-								</a>
-								<a href="https://github.com/zymith123" target="_blank" class="home_social-icon">
-									<i class="uil uil-github"></i>
-								</a>
-								<a href="https://gitlab.com/zymith1234" target="_blank" class="home_social-icon">
-									<i class="uil uil-gitlab"></i>
-								</a>
-							</div>
-							<div class="home_img">
-								<svg class="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    								<mask id="mask0" mask-type="alpha">
-        								<path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-    								</mask>
-    								<g mask="url(#mask0)">
-        								<path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-        								<image class="home_blob-img" href="assets/img/profile.jpg"/>
-    								</g>
-								</svg>
-							</div>
-							<div class="home_data">
-								<h1 class="home_title">
-									<h1 class="home_title">What's up! I'm Jerwin</h1>
-									<h3 class="home_subtitle">Full-Stack Developer</h3>
-									<p class="home_description">Skilled in programming and providing high quality work.</p>
-									<a href="#contact" class="button button--flex">
-										Contact Me &nbsp <i class="uil uil-comment-lines"></i>
-									</a>
-								</h1>
-							</div>
-						</div>
-						<div class="home_scroll">
-							<a href="#about" class="home_scroll-button button--flex">
-								<i class="uil uil-mouse-alt home_scroll-mouse"></i>
-								<span class="home_scroll-name">Scroll down</span>
-								<i class="uil uil-arrow-down home_scroll-arrow"></i>
-							</a>
-						</div>
-					</div>
-				</section>
+  <!-- Icons / manifest -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
-				<!-- About -->
-				<section class="about section" id="about">
-				  <h2 class="section_title" id="about">About Me</h2>
-				  <span class="section_subtitle">My Introduction</span>	
-				  <div class="about_container container grid">
-				  	<img src="assets/img/nature.jpg" alt="" class="about_img">
-				  	<div class="about_data">
-				  		<p class="about_description">Hi, my name is Jerwin Babatugon. I graduated college from Cebu Institute of Technology - University. I am Full Stack Web Developer currently located in Cebu City, Philippines. I have enjoyed very much working as a programmer and love to provide assistance to the companies that need my help. I am meticulous in everything I do. I am trustworthy, respectful of deadlines, and want us both to be proud of the work being done. If you have the work available, I am ready to work with you!</p>
-				  		<div class="about_info">
-				  			<div>
-				  				<span class="about_info-title">3.17 
-				  					</span>
-				  				<span class="about_info-name">Years <br> experience</span>
-				  			</div>
-				  	
-				  			<div>
-				  				<span class="about_info-title">8 
-				  					</span>
-				  				<span class="about_info-name">Projects</span>
-				  			</div>
-				  		
-				  			<div>
-				  				<span class="about_info-title">1 
-				  					</span>
-				  				<span class="about_info-name">Bootcamp</span>
-				  			</div>
-							
-							<div>
-								<span class="about_info-title">2 
-									</span>
-								<span class="about_info-name">Jobs</span>
-							</div>
-				  		</div>
-				  		<div class="about_buttons">
-				  			<a href="assets/pdf/Jerwin-Babatugon-resume.pdf" class="button button--flex" target="_blank">
-				  				Resume/CV<i class="uil uil-download-alt button_icon"></i>
-				  			</a>
-				  		</div>
-				  	</div>
-				  </div>
-				</section>
+  <!-- Fonts: self-hosted Inter, non-blocking -->
+  <link rel="preload" href="assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
 
-				<!-- skills -->
-				<section class="skills section" id="skills">
-					<h2 class="section_title">Skills</h2>
-					<span class="section_subtitle">My technical level</span>
-					<div class="skills_container container grid">
-						<div class="skills_container2">
-							<div class="skills_content skills_open">
-								<div class="skills_header">
-									<i class="uil uil-brackets-curly skills_icon"></i>
-									<div>
-										<h1 class="skills_title">Frontend Experience</h1>
-										<span class="skills_subtitle">3.17 years</span>			
-									</div>
-									<i class="uil uil-angle-down skills_arrow"></i>
-								</div>
-								<div class="skills_list grid">
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">HTML</h3>
-											<span class="skills_number">90%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_html"></span>
-										</div>
-									</div>
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">CSS</h3>
-											<span class="skills_number">80%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_css"></span>
-										</div>
-									</div>
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">React</h3>
-											<span class="skills_number">60%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_react"></span>
-										</div>
-									</div>
+  <!-- Set theme before paint to avoid flash. Dark is the default. -->
+  <script>
+    document.documentElement.classList.add('js');
+      try {
+      var t = localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
 
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">AngularJS</h3>
-											<span class="skills_number">60%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_angular"></span>
-										</div>
-									</div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://zymith1234.gitlab.io/jerwin-full-stack-dev/#person",
+        "name": "Jerwin Babatugon",
+        "jobTitle": "Software Developer",
+        "url": "https://zymith1234.gitlab.io/jerwin-full-stack-dev/",
+        "email": "mailto:jerbabats@gmail.com",
+        "worksFor": { "@type": "Organization", "name": "M Lhuillier Financial Services Inc." },
+        "address": { "@type": "PostalAddress", "addressCountry": "PH" },
+        "knowsAbout": [
+          "Software Development", "JavaScript", "TypeScript", "Vue.js", "Nuxt",
+          "React", "Next.js", "Node.js", "NestJS", "MySQL", "PostgreSQL",
+          "REST APIs", "Workflow Automation", "n8n", "AI Automation", "API Integration"
+        ],
+        "sameAs": [
+          "https://github.com/zymith123",
+          "https://gitlab.com/zymith1234",
+          "https://www.linkedin.com/in/jerwin-babatugon"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://zymith1234.gitlab.io/jerwin-full-stack-dev/#website",
+        "url": "https://zymith1234.gitlab.io/jerwin-full-stack-dev/",
+        "name": "Jerwin Babatugon — Portfolio",
+        "publisher": { "@id": "https://zymith1234.gitlab.io/jerwin-full-stack-dev/#person" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">Vue</h3>
-											<span class="skills_number">80%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_vue"></span>
-										</div>
-									</div>
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">Nuxt</h3>
-											<span class="skills_number">80%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_nuxt"></span>
-										</div>
-									</div>
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">Quasar</h3>
-											<span class="skills_number">70%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_quasar"></span>
-										</div>
-									</div>
-								</div>
-							</div>
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#home" aria-label="Jerwin Babatugon — home">
+        <span class="brand__mark" aria-hidden="true">J</span>
+        <span>Jerwin&nbsp;Babatugon</span>
+      </a>
 
-							<div class="skills_content skills_close">
-								<div class="skills_header">
-									<i class="uil uil-server skills_icon"></i>
-									<div>
-										<h1 class="skills_title">Backend Experience</h1>
-										<span class="skills_subtitle">8 Months</span>			
-									</div>
-									<i class="uil uil-angle-down skills_arrow"></i>
-								</div> 
-								<div class="skills_list grid">
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">Node.js</h3>
-											<span class="skills_number">60%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_node"></span>
-										</div>
-									</div>
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">Express.js</h3>
-											<span class="skills_number">60%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_express"></span>
-										</div>
-									</div>
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">MongoDB</h3>
-											<span class="skills_number">60%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_mongodb"></span>
-										</div>
-									</div>
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">Play Framework(Scala)</h3>
-											<span class="skills_number">80%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_play"></span>
-										</div>
-									</div>
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">Postgres</h3>
-											<span class="skills_number">70%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_postgres"></span>
-										</div>
-									</div>
-								</div>
-							</div>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#experience">Experience</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#automation">Automation</a></li>
+          <li><a class="nav__link" href="#services">Services</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta-mobile" href="#contact">Let&rsquo;s talk</a>
+      </nav>
 
-							<div class="skills_content skills_close">
-								<div class="skills_header">
-									<i class="uil uil-code-branch skills_icon"></i>
-									<div>
-										<h1 class="skills_title">Other Programs</h1>
-										<span class="skills_subtitle"></span>			
-									</div>
-									<i class="uil uil-angle-down skills_arrow"></i>
-								</div> 
-								<div class="skills_list grid">
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">SQL</h3>
-											<span class="skills_number">70%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_sql"></span>
-										</div>
-									</div>
-									<div class="skills_data">
-										<div class="skills_titles">
-											<h3 class="skills_name">Git</h3>
-											<span class="skills_number">70%</span>
-										</div>
-										<div class="skills_bar">
-											<span class="skills_percentage skills_git"></span>
-										</div>
-									</div>
-								</div>
-							</div>
+      <div class="header-actions">
+        <a class="btn btn--primary btn--sm nav__cta-desktop" href="#contact">Let&rsquo;s talk</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="assets/img/icons.svg#i-moon"></use></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="assets/img/icons.svg#i-sun"></use></svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-						</div>
-					</div>
-				</section>
+  <main id="main">
 
-				<!-- Qualification -->
-				<section class="qualification section">
-					<h2 class="section_title">Qualification</h2>
-					<span class="section_subtitle">My Personal Journey</span>
-					<div class="qualification_container container">
-						<div class="qualification_tabs">
-							<div class="qualification_button button--flex qualification_active" data-target="#education">
-								<i class="uil uil-graduation-cap qualification_icon"></i>
-			 					Education
-							</div>
-							<div class="qualification_button button--flex" data-target="#work">
-								<i class="uil uil-constructor qualification_icon"></i>
-			 					Work
-							</div>
-						</div>
-						<div class="qualification_sections">
-							<!-- ===== Education ===== -->
-							<div class="qualification_content qualification_active" data-content id="education">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="container hero__grid">
+        <div class="hero__intro">
+          <p class="hero__status">Open to remote software &amp; automation work</p>
+          <h1 class="hero__title">Software Developer &amp;<br><span class="accent">AI Automation Builder</span></h1>
+          <p class="hero__lead">
+            I build and maintain production web applications, and I design practical
+            AI-powered automations that connect the tools businesses already use &mdash;
+            n8n, APIs, webhooks, databases and AI.
+          </p>
+          <p class="text-muted" style="margin-top:1rem;font-size:var(--fs-sm)">
+            Currently a Software Developer at M Lhuillier Financial Services. Open to
+            remote software opportunities and automation projects.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">
+              View my work
+              <svg class="icon btn__icon" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"></use></svg>
+            </a>
+            <a class="btn btn--secondary" href="#automation">Let&rsquo;s automate your business</a>
+          </div>
+          <div class="link-row hero__links">
+            <a href="https://github.com/zymith123" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-github"></use></svg> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/jerwin-babatugon" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-linkedin"></use></svg> LinkedIn
+            </a>
+            <a href="https://gitlab.com/zymith1234" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-gitlab"></use></svg> GitLab
+            </a>
+            <a href="assets/cv/Jerwin-Babatugon-CV.pdf" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-download"></use></svg> Résumé
+            </a>
+          </div>
+        </div>
 
-								<div class="qualification_data">			
-									<div>
-										<h3 class="qualification_title">Full-Stack MERN Developer</h3>
-										<span class="qualification_subtitle">Zuitt-Coding Bootcamp Philippines</span>
-										<div class="qualification_calendar">
-											<i class="uil uil-schedule"></i>
-											Oct 2020 - Jan 2021
-										</div>
-									</div>
-									<div>
-										<span class="qualification_rounder"></span>
-										<span class="qualification_line"></span>
-									</div>	
-								</div>
+        <div class="hero__portrait">
+          <img src="assets/img/profile.jpg" width="700" height="932"
+               alt="Portrait of Jerwin Babatugon" fetchpriority="high">
+        </div>
+      </div>
+    </section>
 
-								<div class="qualification_data">
-									<div>
-										<h3 class="qualification_title">SQL Course</h3>
-										<span class="qualification_subtitle">Sololearn</span>
-										<div class="qualification_calendar">
-											<i class="uil uil-schedule"></i>
-											Sept 2019
-										</div>
-									</div>
-									<div>
-										<span class="qualification_rounder"></span>
-										<span class="qualification_line"></span>
-									</div>
-								</div>
-								
-								<div class="qualification_data">
-									<div>
-										<h3 class="qualification_title">Electrical Engineer</h3>
-										<span class="qualification_subtitle">Cebu Institute of Technology - University</span>
-										<div class="qualification_calendar">
-											<i class="uil uil-schedule"></i>
-											June 2015 - March 2019
-										</div>
-									</div>
-									<div>
-										<span class="qualification_rounder"></span>
-										<span class="qualification_line"></span>
-									</div>
-								</div>
+    <!-- ================= ABOUT ================= -->
+    <section class="section section--tint section--border about" id="about">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">About</span>
+          <h2 class="section__title">Who I am</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__body reveal">
+            <p>
+              I&rsquo;m Jerwin Babatugon, a software developer based in the Philippines.
+              I build and maintain web applications that businesses rely on day to day,
+              and I design automations that take repetitive manual work off people&rsquo;s
+              plates. My focus is practical: software and workflows that hold up in real
+              use, not demos.
+            </p>
+            <p>
+              I&rsquo;m currently a Software Developer at M Lhuillier Financial Services,
+              working on internal financial systems with Next.js, React, Node.js and
+              NestJS. Before that I spent over two years as a front-end developer at
+              Medspecialized, building and maintaining applications for the company and
+              its sister businesses, and I completed an intensive software engineering
+              training program at Vauldex. Today I&rsquo;m extending that experience into
+              AI automation &mdash; using n8n, Apify, APIs and AI models to connect the
+              tools a business already uses and cut out the steps people shouldn&rsquo;t
+              have to do by hand.
+            </p>
+          </div>
+          <dl class="about__aside reveal">
+            <div class="about__fact">
+              <dt>Currently</dt>
+              <dd>Software Developer &middot; M Lhuillier Financial Services</dd>
+            </div>
+            <div class="about__fact">
+              <dt>Based in</dt>
+              <dd>Philippines &middot; GMT+8 &middot; available remote</dd>
+            </div>
+            <div class="about__fact">
+              <dt>Focus</dt>
+              <dd>Web applications &amp; workflow automation</dd>
+            </div>
+            <div class="about__fact">
+              <dt>Education</dt>
+              <dd>BS Electrical Engineering, Cebu Institute of Technology &ndash; University</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
 
-							</div>
-							<!-- ===== Work ===== -->
-							<div class="qualification_content" data-content id="work">
-								<div class="qualification_data">
-									<div></div>
-									<div>
-										<span class="qualification_rounder"></span>
-										<span class="qualification_line"></span>
-									</div>
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Experience</span>
+          <h2 class="section__title">Where I&rsquo;ve worked</h2>
+          <p class="section__subtitle">Building and maintaining production applications across the stack.</p>
+        </div>
 
-									<div>
-										<h3 class="qualification_title">Pre-employment Software Engineer Position Training Program</h3>
-										<span class="qualification_subtitle">Vauldex</span>
-										<div class="qualification_calendar">
-											<i class="uil uil-schedule"></i>
-											February 2025 - June 2025
-										</div>
-									</div>
-									
-									
-								</div>
-								<div class="qualification_data">
-									<div></div>
-									<div>
-										<span class="qualification_rounder"></span>
-										<span class="qualification_line"></span>
-									</div>
-									<div>
-										<h3 class="qualification_title">Front-End Web Developer</h3>
-										<span class="qualification_subtitle">Medspecialized, Inc.</span>
-										<div class="qualification_calendar">
-											<i class="uil uil-schedule"></i>
-											August 2022 - January 2025
-										</div>
-									</div>
-									
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+        <div class="timeline">
+          <article class="timeline__item timeline__item--current reveal">
+            <h3 class="timeline__role">Software Developer</h3>
+            <p class="timeline__org">M Lhuillier Financial Services Inc.</p>
+            <p class="timeline__meta">
+              <span><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-calendar"></use></svg>
+              <time datetime="2025-09-30">Sep 30, 2025</time> &ndash; Present</span>
+            </p>
+            <ul class="timeline__list">
+              <li>Building the frontend for the Disbursement Application revamp &mdash; an internal system that disburses funds to divisions and distributes payouts to people by their assigned division &mdash; working primarily in Next.js and React.</li>
+              <li>Delivered a cancellation flow as an enhancement to the Billing System, a services-billing application comparable to utility billing such as electricity or water.</li>
+              <li>Working on the reprinting logic for pawnshop transactions.</li>
+              <li>Coordinating with backend developers on features that depend on backend APIs (Node.js / NestJS, MySQL), and helping investigate and fix backend issues found during QA.</li>
+              <li>Coordinating with the team that handles GCP deployments when deployment or infrastructure setup needs their involvement.</li>
+            </ul>
+            <div class="chip-set timeline__tags">
+              <span class="chip">Next.js</span><span class="chip">React</span><span class="chip">Node.js</span>
+              <span class="chip">NestJS</span><span class="chip">MySQL</span><span class="chip">GCP</span>
+            </div>
+          </article>
 
-				<!-- Services -->
-				<section class="services section" id="services">
-					<h2 class="section_title">Services</h2>
-					<span class="section_subtitle">What I offer</span>
+          <article class="timeline__item reveal">
+            <h3 class="timeline__role">Pre-employment Software Engineer Training Program</h3>
+            <p class="timeline__org">Vauldex</p>
+            <p class="timeline__meta">
+              <span><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-calendar"></use></svg>
+              <time datetime="2025-02">Feb 2025</time> &ndash; <time datetime="2025-06">Jun 2025</time></span>
+            </p>
+            <ul class="timeline__list">
+              <li>Built responsive interfaces with Vue.js and Nuxt.js; developed backend services with Play Framework (Scala).</li>
+              <li>Worked with PostgreSQL and H2 for database design and management.</li>
+              <li>Contributed to an Attendance Management application &mdash; user authentication, attendance tracking, and reporting.</li>
+              <li>Collaborated on frontend&ndash;backend integration and on debugging and performance improvements in an agile, project-based environment.</li>
+            </ul>
+            <div class="chip-set timeline__tags">
+              <span class="chip">Vue</span><span class="chip">Nuxt</span><span class="chip">Scala</span>
+              <span class="chip">Play Framework</span><span class="chip">PostgreSQL</span>
+            </div>
+          </article>
 
-					<div class="services_container container grid">
-						<div class="services_content">
-							<div>
-								<i class="uil uil-pen services_icon"></i>
-								<h3 class="services_title">Front-End <br> Developer</h3>
+          <article class="timeline__item reveal">
+            <h3 class="timeline__role">Front-End Web Developer</h3>
+            <p class="timeline__org">Medspecialized, Inc.</p>
+            <p class="timeline__meta">
+              <span><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-calendar"></use></svg>
+              <time datetime="2022-08">Aug 2022</time> &ndash; <time datetime="2025-01">Jan 2025</time></span>
+            </p>
+            <ul class="timeline__list">
+              <li>Built and maintained the front-end of websites for the company and its sister companies.</li>
+              <li>Developed and enhanced key applications: a Food Ordering App (Vue), an Onboarding App (Nuxt 3), a Course App (AngularJS), and a Task Tracker App for the India team (Quasar).</li>
+              <li>Used Postman and MongoDB to modify databases and verify outcomes.</li>
+              <li>Occasionally updated backend APIs and controllers during debugging when backend developers were unavailable.</li>
+              <li>Ensured cross-browser compatibility and collaborated with teams to deliver responsive, user-friendly applications.</li>
+            </ul>
+            <div class="chip-set timeline__tags">
+              <span class="chip">Vue</span><span class="chip">Nuxt 3</span><span class="chip">AngularJS</span>
+              <span class="chip">Quasar</span><span class="chip">JavaScript</span><span class="chip">MongoDB</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-								<span class="button button--flex button--small button--link services_button">
-									View More
-									<i class="uil uil-arrow-right button_icon"></i>
-								</span>
+    <!-- ================= SKILLS ================= -->
+    <section class="section section--tint section--border skills" id="skills">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Skills</span>
+          <h2 class="section__title">Technologies I work with</h2>
+          <p class="section__subtitle">Grouped by area, with the tools most relevant to my work first.</p>
+        </div>
 
-								<div class="services_modal">
-									<div class="services_modal-content">
-										<h4 class="services_modal-title">Front-End <br> Developer</h4>
-										<i class="uil uil-times services_modal-close"></i>
+        <div class="skill-groups">
+          <div class="skill-group reveal">
+            <p class="skill-group__label"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-code"></use></svg> Frontend</p>
+            <div class="chip-set">
+              <span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">Vue</span>
+              <span class="chip">Nuxt 3</span><span class="chip">React</span><span class="chip">Next.js</span>
+              <span class="chip">AngularJS</span><span class="chip">Quasar</span><span class="chip">Tailwind CSS</span>
+              <span class="chip">HTML</span><span class="chip">CSS</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <p class="skill-group__label"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-server"></use></svg> Backend</p>
+            <div class="chip-set">
+              <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">NestJS</span>
+              <span class="chip">REST APIs</span><span class="chip">Scala</span><span class="chip">Play Framework</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <p class="skill-group__label"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-database"></use></svg> Databases</p>
+            <div class="chip-set">
+              <span class="chip">MongoDB</span><span class="chip">PostgreSQL</span><span class="chip">MySQL</span>
+              <span class="chip">Prisma</span><span class="chip">SQL</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <p class="skill-group__label"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-git-branch"></use></svg> DevOps &amp; Tools</p>
+            <div class="chip-set">
+              <span class="chip">Git</span><span class="chip">Docker</span><span class="chip">Linux</span>
+              <span class="chip">GCP</span><span class="chip">Cloud SQL</span><span class="chip">API integration</span>
+              <span class="chip">Testing</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <p class="skill-group__label"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-workflow"></use></svg> Automation</p>
+            <div class="chip-set">
+              <span class="chip">n8n</span><span class="chip">Apify</span><span class="chip">Webhooks</span>
+              <span class="chip">API integrations</span><span class="chip">Google Sheets automation</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <p class="skill-group__label"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-sparkles"></use></svg> AI</p>
+            <div class="chip-set">
+              <span class="chip">AI API integration</span><span class="chip">AI-powered workflow automation</span>
+              <span class="chip">AI-assisted development</span>
+            </div>
+          </div>
+        </div>
+        <p class="skill-note">Currently developing: n8n workflow automation and AI-powered automations.</p>
+      </div>
+    </section>
 
-										<ul class="services_modal-services grid">
-											<li class="services_modal-service">
-												<i class="uil uil-check-circle services_modal-icon"></i>
-												<p>Develop user interface.</p>
-											</li>
-											<li class="services_modal-service">
-												<i class="uil uil-check-circle services_modal-icon"></i>
-												<p>Web page development</p>
-											</li>
-											<li class="services_modal-service">
-												<i class="uil uil-check-circle services_modal-icon"></i>
-												<p>UX element Interactions</p>
-											</li>
+    <!-- ================= PROJECTS ================= -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Projects</span>
+          <h2 class="section__title">Selected work</h2>
+          <p class="section__subtitle">Applications I&rsquo;ve built, and an AI automation I&rsquo;m developing. Each links to a short case study.</p>
+        </div>
 
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="services_content">
-							<div>
-								<i class="uil uil-arrow services_icon"></i>
-								<h3 class="services_title">Back-End <br>Developer</h3>
+        <div class="projects__grid">
+          <a class="card card--link project-card reveal" href="projects/attendance-management-system/">
+            <div class="project-card__media">
+              <img src="assets/img/projects/attendance-management-system.jpg" width="800" height="500"
+                   alt="Attendance Management System interface" loading="lazy" decoding="async">
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Attendance Management System</h3>
+              <p class="project-card__text">A scheduling and attendance tool for employers: admins upload schedule and attendance files, and admins and employees review attendance records.</p>
+              <div class="chip-set"><span class="chip">Nuxt</span><span class="chip">Play Framework (Scala)</span><span class="chip">PostgreSQL</span></div>
+              <span class="project-card__foot">Read case study
+                <svg class="icon arrow" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"></use></svg>
+              </span>
+            </div>
+          </a>
 
-								<span class="button button--flex button--small button--link services_button">
-									View More
-									<i class="uil uil-arrow-right button_icon"></i>
-								</span>
+          <a class="card card--link project-card reveal" href="projects/budget-tracking-app/">
+            <div class="project-card__media">
+              <img src="assets/img/projects/budget-tracking-app.jpg" width="800" height="500"
+                   alt="Budget Tracking App interface" loading="lazy" decoding="async">
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Budget Tracking App</h3>
+              <p class="project-card__text">A personal finance tracker for recording income and expenses and monitoring balance over time.</p>
+              <div class="chip-set"><span class="chip">Next.js</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">MongoDB</span></div>
+              <span class="project-card__foot">Read case study
+                <svg class="icon arrow" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"></use></svg>
+              </span>
+            </div>
+          </a>
 
-								<div class="services_modal">
-									<div class="services_modal-content">
-										<h4 class="services_modal-title">Back-End <br>Developer</h4>
-										<i class="uil uil-times services_modal-close"></i>
+          <a class="card card--link project-card reveal" href="projects/job-discovery-automation/">
+            <div class="project-card__media">
+              <img src="assets/img/projects/job-discovery-automation.jpg" width="800" height="500"
+                   alt="Job Discovery Automation workflow" loading="lazy" decoding="async">
+              <span class="project-card__badge badge badge--dev">In Development</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">AI-Powered Job Discovery Automation</h3>
+              <p class="project-card__text">An automation that collects job listings on a schedule, scores each role for fit with AI and explains why, then drafts a tailored cover letter.</p>
+              <div class="chip-set"><span class="chip">n8n</span><span class="chip">Apify</span><span class="chip">Google Gemini</span><span class="chip">Google Sheets</span></div>
+              <span class="project-card__foot">Read case study
+                <svg class="icon arrow" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"></use></svg>
+              </span>
+            </div>
+          </a>
 
-										<ul class="services_modal-services grid">
-											<li class="services_modal-service">
-												<i class="uil uil-check-circle services_modal-icon"></i>
-												<p>Server side development.</p>
-											</li>
-											<li class="services_modal-service">
-												<i class="uil uil-check-circle services_modal-icon"></i>
-												<p>Code that will help browsers to communicate with database information.</p>
-											</li>
-											<li class="services_modal-service">
-												<i class="uil uil-check-circle services_modal-icon"></i>
-												<p>Knowledge of web services or API</p>
-											</li>
+          <a class="card card--link project-card reveal" href="projects/course-booking-app/">
+            <div class="project-card__media">
+              <img src="assets/img/projects/course-booking-app.jpg" width="800" height="500"
+                   alt="Course Booking App interface" loading="lazy" decoding="async">
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Course Booking App</h3>
+              <p class="project-card__text">A course enrollment app with authentication, user profiles, course browsing and enrollment, and admin management.</p>
+              <div class="chip-set"><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">MongoDB</span></div>
+              <span class="project-card__foot">Read case study
+                <svg class="icon arrow" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"></use></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+    <!-- ================= AUTOMATION & AI ================= -->
+    <section class="section section--tint section--border automation" id="automation">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Automation &amp; AI</span>
+          <h2 class="section__title">Automating repetitive business processes</h2>
+          <p class="section__subtitle">
+            I build workflows that connect the tools a business already uses, so
+            information moves on its own instead of by hand. This is a growing part of
+            my work, built on my software development background.
+          </p>
+        </div>
 
-				<!-- Portfolio -->
-				<section class="portfolio section" id="portfolio">
-					<h2 class="section_title">Portfolio</h2>
-					<span class="section_subtitle">Projects</span>
+        <p class="text-muted" style="font-size:var(--fs-sm);margin-bottom:.75rem">What I connect</p>
+        <div class="chip-set connects">
+          <span class="chip chip--accent">Business applications</span>
+          <span class="chip chip--accent">APIs</span>
+          <span class="chip chip--accent">AI models</span>
+          <span class="chip chip--accent">Databases</span>
+          <span class="chip chip--accent">Google Sheets</span>
+          <span class="chip chip--accent">Webhooks</span>
+          <span class="chip chip--accent">n8n</span>
+          <span class="chip chip--accent">Apify</span>
+          <span class="chip chip--accent">Email</span>
+          <span class="chip chip--accent">Notifications</span>
+        </div>
 
-					<div class="portfolio_container container swiper mySwiper swiper-container">
-						<div class="swiper-wrapper">
-							<!-- ===== Portfolio 4 ===== -->
-							<div class="portfolio_content grid swiper-slide">
-								<div>
-									<div style="margin-bottom: var(--mb-0-5);">
-										<span>Code:</span>
-										<a href="https://gitlab.com/zymith1234/ams-client" target="_blank" class="code-link-btn">Front-End</a>
-										<a href="https://gitlab.com/zymith1234/ams-api" target="_blank" class="code-link-btn">Back-End</a>
-									</div>
-									<img src="assets/img/portfolio_4.png" alt="" class="portfolio_img">
-								</div>
-								<div class="portfolio_data">
-									<h3 class="portfolio_title">Attendance Management System</h3>
-									<p class="portfolio_description">
-										 The admin uploads the schedule and attendance of employees using the correct file format. Both admins and employees can view the attendance. The technologies used are Nuxt, Play Framework (Scala), and PostgreSQL.
-									</p>
-									<a href="https://ams-client-nine.vercel.app/login" class="button button--flex button--small portfolio_button" target="_blank">
-										Demo
-										<i class="uil uil-arrow-right button_icon"></i>
-									</a>
-									<!-- <div class="dropdown" id="sourceDropdown">
-										<button class="button button--flex button--small portfolio_button" id="dropdownToggle">
-											Source
-											<i class="uil uil-angle-down button_icon"></i>
-										</button>
-										<div class="dropdown_menu" id="dropdownMenu">
-											<a href="https://ams-client-nine.vercel.app/login" target="_blank">Demo</a>
-											<a href="https://gitlab.com/zymith1234/ams-client" target="_blank">Code Source Front-end</a>
-											<a href="https://gitlab.com/zymith1234/ams-api" target="_blank">Code Source Back-end</a>
-										</div>
-									</div> -->
-								</div>
-							</div>
+        <h3 class="section__title" style="font-size:var(--fs-h3);margin-bottom:2rem">How I approach a workflow</h3>
+        <ol class="stepper">
+          <li class="step"><p class="step__name">Discover</p><p class="step__text">Map the repetitive process and where time is lost.</p></li>
+          <li class="step"><p class="step__name">Analyze</p><p class="step__text">Identify which steps are rule-based and safe to automate.</p></li>
+          <li class="step"><p class="step__name">Design</p><p class="step__text">Plan a workflow around your existing tools and data.</p></li>
+          <li class="step"><p class="step__name">Automate</p><p class="step__text">Build it in n8n with APIs, webhooks and AI where useful.</p></li>
+          <li class="step"><p class="step__name">Integrate</p><p class="step__text">Connect it to the apps, sheets and inboxes you already use.</p></li>
+          <li class="step"><p class="step__name">Deploy</p><p class="step__text">Put it live with error handling and notifications.</p></li>
+          <li class="step"><p class="step__name">Improve</p><p class="step__text">Monitor real runs and refine the logic over time.</p></li>
+        </ol>
 
-							<!-- ===== Portfolio 3 ===== -->
-							<div class="portfolio_content grid swiper-slide">
-								<div>
-									<div style="margin-bottom: var(--mb-0-5);">
-										<span>Code:</span>
-										<a href="https://gitlab.com/zymith1234/capstone3-frontend-final" target="_blank" class="code-link-btn">Front-End</a>
-										<a href="https://gitlab.com/zymith1234/capstone3-backend-final" target="_blank" class="code-link-btn">Back-End</a>
-									</div>
-									<img src="assets/img/portfolio_3.png" alt="" class="portfolio_img">
-								</div>
-								<div class="portfolio_data">
-									<h3 class="portfolio_title">Budget Tracking App</h3>
-									<p class="portfolio_description">
-										Website is created using the following discussed technologies: MongoDB, Express JS, Next JS, and Node JS
-									</p>
-									<a href="https://capstone3-frontend-final-1luw.vercel.app/" class="button button--flex button--small portfolio_button" target="_blank">
-										Demo
-										<i class="uil uil-arrow-right button_icon"></i>
-									</a>
-								</div>
-							</div>
+        <p style="margin-top:3rem">
+          <a class="inline-link" href="automation/">See the automation page &rarr;</a>
+        </p>
+      </div>
+    </section>
 
-							<!-- ===== Portfolio 2 ===== -->
-							<div class="portfolio_content grid swiper-slide">
-								<div>
-									<div style="margin-bottom: var(--mb-0-5);">
-										<span>Code:</span>
-										<a href="https://gitlab.com/zymith1234/capstone2-babatugon" target="_blank" class="code-link-btn">Front-End</a>
-										<a href="https://gitlab.com/zymith1234/course-booking-backend" target="_blank" class="code-link-btn">Back-End</a>
-									</div>
-									<img src="assets/img/portfolio_2.png" alt="" class="portfolio_img">
-								</div>
-								<div class="portfolio_data">
-									<h3 class="portfolio_title">Course Booking App</h3>
-									<p class="portfolio_description">An app with login, logout, registration, user profile, view courses, view single course, add course, enroll course, activate and archive course features. To access the admin user, the email is email1@gmail.com and password is password.</p>
-									<a href="https://zymith1234.gitlab.io/capstone2-babatugon/" class="button button--flex button--small portfolio_button" target="_blank">
-										Demo
-										<i class="uil uil-arrow-right button_icon"></i>
-									</a>
-								</div>
-							</div>
+    <!-- ================= FEATURED AUTOMATION ================= -->
+    <section class="section featured" id="featured">
+      <div class="container">
+        <div class="featured__inner reveal">
+          <div class="featured__head">
+            <h2 class="featured__title">AI-Powered Job Discovery Automation</h2>
+            <span class="badge badge--dev">In Development</span>
+          </div>
+          <p class="featured__lead">
+            A personal automation that finds relevant job listings, uses AI to judge how
+            well each one fits, and drafts a tailored cover letter &mdash; so the manual
+            part of a job search is reduced to reviewing and sending. Built as a prototype
+            on an n8n trial; parts of the pipeline are still being built.
+          </p>
 
-							<!-- ===== Portfolio 1 ===== -->
-							<div class="portfolio_content grid swiper-slide">
-								<div>
-									<div style="margin-bottom: var(--mb-0-5);">
-										<span>Code:</span>
-										<a href="https://gitlab.com/zymith1234/capstone1-babatugon" target="_blank" class="code-link-btn">Front-End</a>
-									</div>
-									<img src="assets/img/portfolio_1.png" alt="" class="portfolio_img">
-								</div>
-								<div class="portfolio_data">
-									<h3 class="portfolio_title">Web Developer Portfolio</h3>
-									<p class="portfolio_description">A Portfolio Website with Landing Page and Main Section using HTML, CSS, and Bootstrap.</p>
-									<a href="https://zymith1234.gitlab.io/capstone1-babatugon/" class="button button--flex button--small portfolio_button" target="_blank">
-										Demo
-										<i class="uil uil-arrow-right button_icon"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-						<!-- ===== Add Arrows -->
-						<div class="swiper-button-next">
-							<i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-						</div>
-      					<div class="swiper-button-prev">
-      						<i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-      					</div>
-      					<!-- ===== Add Pagination ===== -->
-      					<div class="swiper-pagination"></div>
-					</div>
-				</section>
+          <div class="featured__diagram" role="img" aria-label="Pipeline: a daily schedule triggers an Apify actor that scrapes OnlineJobs.ph; results are limited, then a first AI step scores each job for fit and gives its reasoning, a second AI step drafts a cover letter, and results are written to a Google Sheet. A database, dashboard, and email or Telegram notifications are planned.">
+            <div class="pipeline">
+              <div class="pipeline__row">
+                <span class="pipeline__node pipeline__node--built">Daily schedule</span>
+                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"></use></svg>
+                <span class="pipeline__node pipeline__node--built">Apify &mdash; scrape OnlineJobs.ph</span>
+                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"></use></svg>
+                <span class="pipeline__node pipeline__node--built">Limit results</span>
+              </div>
+              <div class="pipeline__row">
+                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="assets/img/icons.svg#i-chevron-down"></use></svg>
+              </div>
+              <div class="pipeline__row">
+                <span class="pipeline__node pipeline__node--built">AI: score job fit + reasoning</span>
+                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"></use></svg>
+                <span class="pipeline__node pipeline__node--built">AI: draft cover letter</span>
+                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"></use></svg>
+                <span class="pipeline__node pipeline__node--built">Google Sheet</span>
+              </div>
+              <div class="pipeline__row">
+                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="assets/img/icons.svg#i-chevron-down"></use></svg>
+              </div>
+              <div class="pipeline__row">
+                <span class="pipeline__node pipeline__node--planned">Database</span>
+                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"></use></svg>
+                <span class="pipeline__node pipeline__node--planned">Dashboard</span>
+                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"></use></svg>
+                <span class="pipeline__node pipeline__node--planned">Email / Telegram alerts</span>
+              </div>
+            </div>
+            <div class="pipeline__legend">
+              <span><span class="pipeline__swatch pipeline__swatch--built"></span> Built</span>
+              <span><span class="pipeline__swatch pipeline__swatch--planned"></span> Planned</span>
+            </div>
+          </div>
 
-				<!-- Project in mind -->
-				<section class="project section">
-					<div class="project_bg">
-						<div class="project_container container grid">
-							<div class="project_data">
-								<h2 class="project_title">You have a new project</h2>
-								<p class="project_description">Contact me now and get your business known.</p>
-								<a href="#contact" class="button button--flex button--white">
-									Contact Me
-									<i class="uil uil-comment-lines project_icon button_icon"></i>
-								</a>
-							</div>
+          <div class="status-cols">
+            <div class="status-col status-col--built">
+              <h4>Currently built</h4>
+              <ul>
+                <li>Scheduled daily run</li>
+                <li>Apify actor scrapes OnlineJobs.ph listings</li>
+                <li>Result limiting</li>
+                <li>AI step scores each job for fit and gives its reasoning</li>
+                <li>AI step drafts a tailored cover letter</li>
+                <li>Results written to a Google Sheet</li>
+              </ul>
+            </div>
+            <div class="status-col status-col--progress">
+              <h4>In progress</h4>
+              <ul>
+                <li>Refining the filtering and relevance logic</li>
+              </ul>
+            </div>
+            <div class="status-col status-col--planned">
+              <h4>Planned</h4>
+              <ul>
+                <li>A dedicated database in place of the sheet</li>
+                <li>A dashboard to browse and track roles</li>
+                <li>Email / Telegram notifications</li>
+                <li>Persistent hosting</li>
+              </ul>
+            </div>
+          </div>
 
-							<img src="assets/img/project.png" alt="" class="project_img">
-						</div>
-					</div>
-				</section>
+          <p style="margin-top:2rem">
+            <a class="inline-link" href="projects/job-discovery-automation/">Read the full case study &rarr;</a>
+          </p>
+        </div>
+      </div>
+    </section>
 
-				<!-- Testimonial -->
-				<section class="testimonial section">
-					<h2 class="section_title">
-						Testimonial
-					</h2>
-					<span class="section_subtitle">
-						My client is saying
-					</span>
-					<div class="testimonial_container container swiper mySwiper">
-						<div class="swiper-wrapper">
-							<!-- ===== Testimonial 1 ===== -->
-							<div class="testimonial_content swiper-slide">
-								<div class="testimonial_data">
-									<div class="testimonial_header">
-										<img src="assets/img/john_snow.png" alt="" class="testimonial_img">
-										<div>
-											<h3 class="testimonial_name">John Snow</h3>
-											<span class="testimonial_client">Client</span>
-										</div>
-									</div>
-									<div>
-										<i class="uil uil-star testimonial_icon-star"></i>
-										<i class="uil uil-star testimonial_icon-star"></i>
-										<i class="uil uil-star testimonial_icon-star"></i>
-										<i class="uil uil-star testimonial_icon-star"></i>
-										<i class="uil uil-star testimonial_icon-star"></i>
-									</div>
-								</div>
-								<p class="testimonial_description">I like how he works. He helped my business rally every people on the north.</p>
-							</div>
+    <!-- ================= SERVICES ================= -->
+    <section class="section section--tint section--border services" id="services">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="section__eyebrow">AI Automation Services</span>
+          <h2 class="section__title">What I can build for your business</h2>
+          <p class="section__subtitle">Practical automation around the tools you already use &mdash; described by the outcome, not the tech.</p>
+        </div>
 
-							<!-- ===== Testimonial 2 ===== -->
-							<div class="testimonial_content swiper-slide">
-								<div class="testimonial_data">
-									<div class="testimonial_header">
-										<img src="assets/img/cersie.png" alt="" class="testimonial_img">
-										<div>
-											<h3 class="testimonial_name">Cersei Lannister</h3>
-											<span class="testimonial_client">Client</span>
-										</div>
-									</div>
-									<div>
-										<i class="uil uil-star testimonial_icon-star"></i>
-										<i class="uil uil-star testimonial_icon-star"></i>
-										<i class="uil uil-star testimonial_icon-star"></i>
-										<i class="uil uil-star testimonial_icon-star"></i>
-										<i class="uil uil-star testimonial_icon-star"></i>
-									</div>
-								</div>
-								<p class="testimonial_description">With his help, I ruled the 7 kingdoms.</p>
-							</div>
+        <div class="services__grid">
+          <div class="card reveal">
+            <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-workflow"></use></svg></span>
+            <h3 class="card__title">Workflow Automation</h3>
+            <p class="card__text">Connect the tools you already use and remove repetitive manual steps with n8n, APIs and webhooks.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-sparkles"></use></svg></span>
+            <h3 class="card__title">AI-Powered Automation</h3>
+            <p class="card__text">Add AI to a workflow for tasks like classifying, extracting, summarizing or drafting &mdash; with a human in the loop where it matters.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-bot"></use></svg></span>
+            <h3 class="card__title">n8n Development</h3>
+            <p class="card__text">Design, build and host n8n workflows shaped around how your team actually works.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-plug"></use></svg></span>
+            <h3 class="card__title">API Integration</h3>
+            <p class="card__text">Make separate apps talk to each other so data moves automatically instead of by copy-paste.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-users"></use></svg></span>
+            <h3 class="card__title">Lead Generation Automation</h3>
+            <p class="card__text">Collect and organize leads from public sources into a clean, deduplicated, structured list.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-repeat"></use></svg></span>
+            <h3 class="card__title">Data Processing Automation</h3>
+            <p class="card__text">Clean, transform and route data between systems on a schedule or a trigger.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-table"></use></svg></span>
+            <h3 class="card__title">Google Sheets Automation</h3>
+            <p class="card__text">Turn a spreadsheet into a live system: automatic updates, notifications and syncing.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-send"></use></svg></span>
+            <h3 class="card__title">Email Automation</h3>
+            <p class="card__text">Trigger, personalize and route email based on real events instead of manual sending.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-wrench"></use></svg></span>
+            <h3 class="card__title">Custom Internal Tools</h3>
+            <p class="card__text">Small web apps and dashboards built around your automations so your team can use them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-							<!-- ===== Testimonial 3 ===== -->
-							<div class="testimonial_content swiper-slide">
-								<div class="testimonial_data">
-									<div class="testimonial_header">
-										<img src="assets/img/daenerys.png" alt="" class="testimonial_img">
-										<div>
-											<h3 class="testimonial_name">Daenerys Targaryen</h3>
-											<span class="testimonial_client">Client</span>
-										</div>
-									</div>
-									<div>
-										<i class="uil uil-star testimonial_icon-star"></i>
-										<i class="uil uil-star testimonial_icon-star"></i>
-										<i class="uil uil-star testimonial_icon-star"></i>
-										<i class="uil uil-star testimonial_icon-star"></i>
-										<i class="uil uil-star testimonial_icon-star"></i>
-									</div>
-								</div>
-								<p class="testimonial_description">The guidance and wisdom he provided me helped me saved all the slaves and make me realize the role I must take.</p>
-							</div>
+    <!-- ================= CLIENT CTA ================= -->
+    <section class="section cta-band">
+      <div class="container">
+        <div class="cta-band__inner reveal">
+          <h2 class="cta-band__title">Have a repetitive process taking hours every week?</h2>
+          <p class="cta-band__text">Let&rsquo;s identify what can be automated and design a practical workflow around your existing tools.</p>
+          <a class="btn btn--primary" href="#contact">
+            Discuss your automation
+            <svg class="icon btn__icon" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+    </section>
 
-						</div>
-						<div class="swiper-pagination swiper-pagination-testimonial"></div>
-					</div>
-				</section>
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Contact</span>
+          <h2 class="section__title">Get in touch</h2>
+          <p class="section__subtitle">For remote roles or an automation project, send a message and I&rsquo;ll get back to you.</p>
+        </div>
 
-				<!-- Contact me -->
-				<section class="contact section" id="contact">
-					<h2 class="section_title">Contact Me</h2>
-					<span class="section_subtitle">Get in touch</span>
-					<div class="contact_container container grid">
-						<div>
-							<div class="contact_information">
-								<i class="uil uil-phone contact_icon"></i>
-								<div>
-									<h3 class="contact_title">Call Me</h3>
-									<span class="contact_subtitle">09685753536</span>
-								</div>
-							</div>
-							<div class="contact_information">
-								<i class="uil uil-envelope contact_icon"></i>
-								<div>
-									<h3 class="contact_title">Email</h3>
-									<span class="contact_subtitle">jerbabats@gmail.com</span>
-								</div>
-							</div>
-							<div class="contact_information">
-								<i class="uil uil-map-marker contact_icon"></i>
-								<div>
-									<h3 class="contact_title">Location</h3>
-									<span class="contact_subtitle">Cebu City, Cebu, Philippines</span>
-								</div>
-							</div>
-						</div>
-							<form action="https://api.web3forms.com/submit" method="POST" class="contact_form grid">
+        <div class="contact__grid">
+          <div class="contact__methods">
+            <div class="contact__method">
+              <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-mail"></use></svg></span>
+              <div>
+                <h3>Email</h3>
+                <a href="mailto:jerbabats@gmail.com">jerbabats@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact__method">
+              <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-linkedin"></use></svg></span>
+              <div>
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/jerwin-babatugon" target="_blank" rel="noopener">linkedin.com/in/jerwin-babatugon</a>
+              </div>
+            </div>
+            <div class="contact__method">
+              <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-github"></use></svg></span>
+              <div>
+                <h3>GitHub &amp; GitLab</h3>
+                <a href="https://github.com/zymith123" target="_blank" rel="noopener">github.com/zymith123</a><br>
+                <a href="https://gitlab.com/zymith1234" target="_blank" rel="noopener">gitlab.com/zymith1234</a>
+              </div>
+            </div>
+            <div class="contact__method">
+              <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-map-pin"></use></svg></span>
+              <div>
+                <h3>Location</h3>
+                <span>Philippines &middot; GMT+8 &middot; available remote</span>
+              </div>
+            </div>
+          </div>
 
-								<input type="hidden" name="access_key" value="b6e905a8-07f4-4fa0-b4d9-898ad67b7eb2">
+          <form class="contact__form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="b6e905a8-07f4-4fa0-b4d9-898ad67b7eb2">
+            <input type="hidden" name="subject" value="New message from portfolio">
+            <input type="hidden" name="from_name" value="Portfolio contact form">
+            <div class="hp-field" aria-hidden="true">
+              <label>Leave this field empty<input type="text" name="botcheck" tabindex="-1" autocomplete="off"></label>
+            </div>
 
-								<div class="contact_inputs grid">
-									<div class="contact_content">
-										<label for="name" class="contact_label">Name</label>
-										<input type="text" name="name" class="contact_input" placeholder="Your name">
-									</div>
-									<div class="contact_content">
-										<label for="email" class="contact_label">Email</label>
-										<input type="email" name="email" class="contact_input" placeholder="Your email">
-									</div>
-								</div>
-								<div class="contact_content">
-									<label for="subject" class="contact_label">Subject</label>
-									<input type="text" name="subject" class="contact_input" placeholder="Your subject">
-								</div>
-								<div class="contact_content">
-									<label for="message" class="contact_label">Message</label>
-									<textarea name="message" id="" cols="0" rows="7" class="contact_input" placeholder="Your message"></textarea>
-								</div>
-								<button type="submit" class="button button--flex">
-									Send Message
-									<i class="uil uil-message button_icon"></i>
-								</button>
-							</form>
-					</div>
-				</section>
-			</main>
-			<!-- Footer -->
-			<footer class="footer">
-				<div class="footer_bg">
-					<div class="footer_container container grid">
-						<div>
-							<h1 class="footer_title">Jerwin</h1>
-							<span class="footer_subtitle">Full-Stack Developer</span>
-						</div>
-						<ul class="footer_links">
-							<li>
-								<a href="#services" class="footer_link">Services</a>
-							</li>
-							<li>
-								<a href="#portfolio" class="footer_link">Portfolio</a>
-							</li>
-							<li>
-								<a href="#contact" class="footer_link">Contact&nbspMe</a>
-							</li>
-						</ul>
-						<div class="footer_socials">
-							<a href="https://www.facebook.com/zymith1234/" target="_blank" class="footer_social">
-								<i class="uil uil-facebook-f"></i>
-							</a>
-							<a href="https://www.linkedin.com/in/jerwin-babatugon-051a721a9/" target="_blank" class="footer_social">
-								<i class="uil uil-linkedin-alt"></i>
-							</a>
-						</div>
-					</div>
-					<p class="footer_copy">&#169; Jerwin. All right reserved</p>
-				</div>
-			</footer>
+            <div class="form-row form-row--2">
+              <div class="field">
+                <label class="field__label" for="cf-name">Name</label>
+                <input class="field__input" id="cf-name" name="name" type="text" autocomplete="name" required
+                       aria-describedby="cf-name-err">
+                <span class="field__error" id="cf-name-err" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="cf-email">Email</label>
+                <input class="field__input" id="cf-email" name="email" type="email" autocomplete="email" required
+                       aria-describedby="cf-email-err">
+                <span class="field__error" id="cf-email-err" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="cf-msg">Message</label>
+              <textarea class="field__input" id="cf-msg" name="message" rows="6" required
+                        aria-describedby="cf-msg-err"></textarea>
+              <span class="field__error" id="cf-msg-err" aria-live="polite"></span>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit" id="cf-submit">
+              Send message
+              <svg class="icon btn__icon" aria-hidden="true"><use href="assets/img/icons.svg#i-send"></use></svg>
+            </button>
+            <p class="form-status" id="cf-status" role="status" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-			<!-- Scroll Top -->
-			<a href="" class="scrollup" id="scroll-up">
-				<i class="uil uil-arrow-up scroll_up_icon"></i>
-			</a>
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand" href="#home">
+            <span class="brand__mark" aria-hidden="true">J</span>
+            <span>Jerwin&nbsp;Babatugon</span>
+          </a>
+          <p>Software developer &amp; AI automation builder. Building production web apps and practical business automations.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul class="site-footer__links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#automation">Automation &amp; AI</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For businesses</h4>
+          <ul class="site-footer__links">
+            <li><a href="automation/">Automation page</a></li>
+            <li><a href="#services">AI automation services</a></li>
+            <li><a href="#contact">Discuss your automation</a></li>
+            <li><a href="assets/cv/Jerwin-Babatugon-CV.pdf" target="_blank" rel="noopener">Download résumé</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; <span id="year">2026</span> Jerwin Babatugon. Built with HTML, CSS &amp; JavaScript &middot; deployed on GitLab Pages.</p>
+        <div class="site-footer__socials">
+          <a href="https://github.com/zymith123" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-github"></use></svg>
+          </a>
+          <a href="https://gitlab.com/zymith1234" target="_blank" rel="noopener" aria-label="GitLab">
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-gitlab"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/jerwin-babatugon" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-linkedin"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-			<!-- Swiper JS -->
-			<script src="assets/js/swiper-bundle.min.js"></script>
-
-			<!-- Main JS -->
-			<script type="text/javascript" src="assets/js/main.js"></script>
-		</body>
-	</html>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

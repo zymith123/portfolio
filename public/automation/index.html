@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AI Automation &amp; n8n Development — Jerwin Babatugon</title>
+  <meta name="description" content="Practical business automation with n8n, APIs, webhooks and AI. Jerwin Babatugon connects the tools you already use to remove repetitive manual work — lead generation, data processing, Google Sheets, email and custom internal tools.">
+  <meta name="author" content="Jerwin Babatugon">
+  <link rel="canonical" href="https://zymith1234.gitlab.io/jerwin-full-stack-dev/automation/">
+
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="color-scheme" content="dark light">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jerwin Babatugon">
+  <meta property="og:title" content="AI Automation &amp; n8n Development — Jerwin Babatugon">
+  <meta property="og:description" content="Practical business automation with n8n, APIs, webhooks and AI — built around the tools you already use.">
+  <meta property="og:url" content="https://zymith1234.gitlab.io/jerwin-full-stack-dev/automation/">
+  <meta property="og:image" content="https://zymith1234.gitlab.io/jerwin-full-stack-dev/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://zymith1234.gitlab.io/jerwin-full-stack-dev/assets/img/og-image.jpg">
+
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <link rel="preload" href="../assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+      try {
+      var t = localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+    } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Automation & n8n Development",
+    "serviceType": "Business workflow automation",
+    "provider": {
+      "@type": "Person",
+      "name": "Jerwin Babatugon",
+      "url": "https://zymith1234.gitlab.io/jerwin-full-stack-dev/"
+    },
+    "areaServed": "Remote / worldwide",
+    "description": "Practical automation with n8n, APIs, webhooks and AI: workflow automation, API integration, lead generation, data processing, Google Sheets automation, email automation and custom internal tools."
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../" aria-label="Jerwin Babatugon — home">
+        <span class="brand__mark" aria-hidden="true">J</span>
+        <span>Jerwin&nbsp;Babatugon</span>
+      </a>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../#about">About</a></li>
+          <li><a class="nav__link" href="../#experience">Experience</a></li>
+          <li><a class="nav__link" href="../#projects">Projects</a></li>
+          <li><a class="nav__link" href="./" aria-current="true">Automation</a></li>
+          <li><a class="nav__link" href="#services">Services</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta-mobile" href="#contact">Let&rsquo;s talk</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--primary btn--sm nav__cta-desktop" href="#contact">Let&rsquo;s talk</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="../assets/img/icons.svg#i-moon"></use></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="../assets/img/icons.svg#i-sun"></use></svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="subhero">
+      <div class="container">
+        <a class="subhero__back" href="../">
+          <svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-arrow-left"></use></svg> Back to home
+        </a>
+        <h1 class="subhero__title">Automation for your business</h1>
+        <p class="subhero__lead">
+          I build workflows that connect the tools you already use, so repetitive manual
+          steps happen on their own. This is a growing part of my work, built on a
+          software development background &mdash; which means the automation can be backed
+          by real code and custom tools when it needs to be.
+        </p>
+        <div class="hero__cta" style="margin-top:1.75rem">
+          <a class="btn btn--primary" href="#contact">
+            Discuss your automation
+            <svg class="icon btn__icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-arrow-right"></use></svg>
+          </a>
+          <a class="btn btn--secondary" href="#prototypes">See what I&rsquo;ve built</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint section--border">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">What I connect</span>
+          <h2 class="section__title">The building blocks</h2>
+          <p class="section__subtitle">A workflow usually ties together a few of these.</p>
+        </div>
+        <div class="chip-set connects">
+          <span class="chip chip--accent">Business applications</span>
+          <span class="chip chip--accent">APIs</span>
+          <span class="chip chip--accent">AI models</span>
+          <span class="chip chip--accent">Databases</span>
+          <span class="chip chip--accent">Google Sheets</span>
+          <span class="chip chip--accent">Webhooks</span>
+          <span class="chip chip--accent">n8n</span>
+          <span class="chip chip--accent">Apify</span>
+          <span class="chip chip--accent">Email</span>
+          <span class="chip chip--accent">Notifications</span>
+        </div>
+
+        <h3 class="section__title" style="font-size:var(--fs-h3);margin:3rem 0 2rem">How I approach a workflow</h3>
+        <ol class="stepper">
+          <li class="step"><p class="step__name">Discover</p><p class="step__text">Map the repetitive process and where time is lost.</p></li>
+          <li class="step"><p class="step__name">Analyze</p><p class="step__text">Identify which steps are rule-based and safe to automate.</p></li>
+          <li class="step"><p class="step__name">Design</p><p class="step__text">Plan a workflow around your existing tools and data.</p></li>
+          <li class="step"><p class="step__name">Automate</p><p class="step__text">Build it in n8n with APIs, webhooks and AI where useful.</p></li>
+          <li class="step"><p class="step__name">Integrate</p><p class="step__text">Connect it to the apps, sheets and inboxes you already use.</p></li>
+          <li class="step"><p class="step__name">Deploy</p><p class="step__text">Put it live with error handling and notifications.</p></li>
+          <li class="step"><p class="step__name">Improve</p><p class="step__text">Monitor real runs and refine the logic over time.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="section__eyebrow">AI Automation Services</span>
+          <h2 class="section__title">What I can build</h2>
+          <p class="section__subtitle">Described by the outcome, not the tech.</p>
+        </div>
+        <div class="services__grid">
+          <div class="card reveal"><span class="card__icon"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-workflow"></use></svg></span><h3 class="card__title">Workflow Automation</h3><p class="card__text">Connect the tools you already use and remove repetitive manual steps with n8n, APIs and webhooks.</p></div>
+          <div class="card reveal"><span class="card__icon"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-sparkles"></use></svg></span><h3 class="card__title">AI-Powered Automation</h3><p class="card__text">Add AI to a workflow for tasks like classifying, extracting, summarizing or drafting &mdash; with a human in the loop where it matters.</p></div>
+          <div class="card reveal"><span class="card__icon"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-bot"></use></svg></span><h3 class="card__title">n8n Development</h3><p class="card__text">Design, build and host n8n workflows shaped around how your team actually works.</p></div>
+          <div class="card reveal"><span class="card__icon"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-plug"></use></svg></span><h3 class="card__title">API Integration</h3><p class="card__text">Make separate apps talk to each other so data moves automatically instead of by copy-paste.</p></div>
+          <div class="card reveal"><span class="card__icon"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-users"></use></svg></span><h3 class="card__title">Lead Generation Automation</h3><p class="card__text">Collect and organize leads from public sources into a clean, deduplicated, structured list.</p></div>
+          <div class="card reveal"><span class="card__icon"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-repeat"></use></svg></span><h3 class="card__title">Data Processing Automation</h3><p class="card__text">Clean, transform and route data between systems on a schedule or a trigger.</p></div>
+          <div class="card reveal"><span class="card__icon"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-table"></use></svg></span><h3 class="card__title">Google Sheets Automation</h3><p class="card__text">Turn a spreadsheet into a live system: automatic updates, notifications and syncing.</p></div>
+          <div class="card reveal"><span class="card__icon"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-send"></use></svg></span><h3 class="card__title">Email Automation</h3><p class="card__text">Trigger, personalize and route email based on real events instead of manual sending.</p></div>
+          <div class="card reveal"><span class="card__icon"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-wrench"></use></svg></span><h3 class="card__title">Custom Internal Tools</h3><p class="card__text">Small web apps and dashboards built around your automations so your team can use them.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint section--border" id="prototypes">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Prototypes</span>
+          <h2 class="section__title">Workflows I&rsquo;ve built</h2>
+          <p class="section__subtitle">
+            Personal prototypes built on an n8n trial while developing this skill set.
+            They are not running in production, but they show the kind of workflow I put together.
+          </p>
+        </div>
+
+        <div class="services__grid">
+          <article class="card reveal">
+            <span class="badge badge--dev">Prototype</span>
+            <h3 class="card__title" style="margin-top:1rem">AI Job Discovery</h3>
+            <p class="card__text">
+              Runs daily. An Apify actor scrapes OnlineJobs.ph listings; an AI step scores
+              each role for fit and explains its reasoning; a second AI step drafts a
+              tailored cover letter; results land in a Google Sheet.
+            </p>
+            <p style="margin-top:1rem"><a class="inline-link" href="../projects/job-discovery-automation/">Full case study &rarr;</a></p>
+          </article>
+
+          <article class="card reveal">
+            <span class="badge badge--dev">Prototype</span>
+            <h3 class="card__title" style="margin-top:1rem">Lead Generation</h3>
+            <p class="card__text">
+              A form kicks off an Apify actor that pulls business leads from Google Maps.
+              The workflow de-duplicates and standardizes them into a Google Sheet, scrapes
+              each site for emails and socials, uses AI to extract and format the details,
+              and an AI agent drafts an outreach email per lead.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <span class="badge badge--dev">Prototype</span>
+            <h3 class="card__title" style="margin-top:1rem">Upwork Proposal Assistant</h3>
+            <p class="card__text">
+              Pulls a job posting and my CV, then an AI agent drafts a tailored proposal
+              and cover letter aligned to that specific job. The draft is saved as a
+              document and a Gmail draft to review and send &mdash; it does not apply on its own.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <span class="badge badge--dev">Prototype</span>
+            <h3 class="card__title" style="margin-top:1rem">Auto-sort Google Drive Files</h3>
+            <p class="card__text">
+              When a new file lands in Drive, the workflow downloads it, an AI step analyzes
+              the document and decides which folder it belongs in, then it finds that folder
+              and moves the file.
+            </p>
+          </article>
+        </div>
+        <p class="skill-note" style="margin-top:1.5rem">Screenshots of these workflows are available on request.</p>
+      </div>
+    </section>
+
+    <section class="section cta-band">
+      <div class="container">
+        <div class="cta-band__inner reveal">
+          <h2 class="cta-band__title">Have a repetitive process taking hours every week?</h2>
+          <p class="cta-band__text">Let&rsquo;s identify what can be automated and design a practical workflow around your existing tools.</p>
+          <a class="btn btn--primary" href="#contact">
+            Discuss your automation
+            <svg class="icon btn__icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Contact</span>
+          <h2 class="section__title">Tell me about the process</h2>
+          <p class="section__subtitle">A few sentences about the repetitive task and the tools involved is enough to start.</p>
+        </div>
+        <div class="contact__grid">
+          <div class="contact__methods">
+            <div class="contact__method">
+              <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-mail"></use></svg></span>
+              <div><h3>Email</h3><a href="mailto:jerbabats@gmail.com">jerbabats@gmail.com</a></div>
+            </div>
+            <div class="contact__method">
+              <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-linkedin"></use></svg></span>
+              <div><h3>LinkedIn</h3><a href="https://www.linkedin.com/in/jerwin-babatugon" target="_blank" rel="noopener">linkedin.com/in/jerwin-babatugon</a></div>
+            </div>
+            <div class="contact__method">
+              <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-map-pin"></use></svg></span>
+              <div><h3>Location</h3><span>Philippines &middot; GMT+8 &middot; available remote</span></div>
+            </div>
+          </div>
+
+          <form class="contact__form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="b6e905a8-07f4-4fa0-b4d9-898ad67b7eb2">
+            <input type="hidden" name="subject" value="Automation inquiry from portfolio">
+            <input type="hidden" name="from_name" value="Portfolio automation page">
+            <div class="hp-field" aria-hidden="true">
+              <label>Leave this field empty<input type="text" name="botcheck" tabindex="-1" autocomplete="off"></label>
+            </div>
+            <div class="form-row form-row--2">
+              <div class="field">
+                <label class="field__label" for="cf-name">Name</label>
+                <input class="field__input" id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-err">
+                <span class="field__error" id="cf-name-err" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="cf-email">Email</label>
+                <input class="field__input" id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-err">
+                <span class="field__error" id="cf-email-err" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="cf-msg">What would you like to automate?</label>
+              <textarea class="field__input" id="cf-msg" name="message" rows="6" required aria-describedby="cf-msg-err"></textarea>
+              <span class="field__error" id="cf-msg-err" aria-live="polite"></span>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit" id="cf-submit">
+              Send message
+              <svg class="icon btn__icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-send"></use></svg>
+            </button>
+            <p class="form-status" id="cf-status" role="status" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">J</span><span>Jerwin&nbsp;Babatugon</span></a>
+          <p>Software developer &amp; AI automation builder. Building production web apps and practical business automations.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul class="site-footer__links">
+            <li><a href="../#about">About</a></li>
+            <li><a href="../#experience">Experience</a></li>
+            <li><a href="../#projects">Projects</a></li>
+            <li><a href="../#automation">Automation &amp; AI</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For businesses</h4>
+          <ul class="site-footer__links">
+            <li><a href="#services">AI automation services</a></li>
+            <li><a href="#prototypes">Prototypes</a></li>
+            <li><a href="#contact">Discuss your automation</a></li>
+            <li><a href="../assets/cv/Jerwin-Babatugon-CV.pdf" target="_blank" rel="noopener">Download résumé</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; <span id="year">2026</span> Jerwin Babatugon. Built with HTML, CSS &amp; JavaScript &middot; deployed on GitLab Pages.</p>
+        <div class="site-footer__socials">
+          <a href="https://github.com/zymith123" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-github"></use></svg></a>
+          <a href="https://gitlab.com/zymith1234" target="_blank" rel="noopener" aria-label="GitLab"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-gitlab"></use></svg></a>
+          <a href="https://www.linkedin.com/in/jerwin-babatugon" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-linkedin"></use></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

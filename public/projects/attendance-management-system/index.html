@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Attendance Management System — Case Study — Jerwin Babatugon</title>
+  <meta name="description" content="Case study: a schedule and attendance management system built by a team during the Vauldex training program, using Nuxt 3, Play Framework (Scala) and PostgreSQL with JWT auth and CSV imports.">
+  <meta name="author" content="Jerwin Babatugon">
+  <link rel="canonical" href="https://zymith1234.gitlab.io/jerwin-full-stack-dev/projects/attendance-management-system/">
+
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Attendance Management System — Case Study">
+  <meta property="og:description" content="Nuxt 3 + Play Framework (Scala) + PostgreSQL. Schedule and attendance management with JWT auth and CSV imports.">
+  <meta property="og:url" content="https://zymith1234.gitlab.io/jerwin-full-stack-dev/projects/attendance-management-system/">
+  <meta property="og:image" content="https://zymith1234.gitlab.io/jerwin-full-stack-dev/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://zymith1234.gitlab.io/jerwin-full-stack-dev/assets/img/og-image.jpg">
+
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+
+  <link rel="preload" href="../../assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+      try {
+      var t = localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+    } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Attendance Management System",
+    "about": "Schedule and attendance management web application",
+    "author": { "@type": "Person", "name": "Jerwin Babatugon" },
+    "keywords": "Nuxt, Vue, Play Framework, Scala, PostgreSQL, JWT",
+    "url": "https://zymith1234.gitlab.io/jerwin-full-stack-dev/projects/attendance-management-system/"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../../" aria-label="Jerwin Babatugon — home">
+        <span class="brand__mark" aria-hidden="true">J</span><span>Jerwin&nbsp;Babatugon</span>
+      </a>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../../#about">About</a></li>
+          <li><a class="nav__link" href="../../#experience">Experience</a></li>
+          <li><a class="nav__link" href="../../#projects" aria-current="true">Projects</a></li>
+          <li><a class="nav__link" href="../../#automation">Automation</a></li>
+          <li><a class="nav__link" href="../../#services">Services</a></li>
+          <li><a class="nav__link" href="../../#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta-mobile" href="../../#contact">Let&rsquo;s talk</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn--primary btn--sm nav__cta-desktop" href="../../#contact">Let&rsquo;s talk</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-moon"></use></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="../../assets/img/icons.svg#i-sun"></use></svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="icon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="subhero">
+      <div class="container">
+        <a class="subhero__back" href="../../#projects">
+          <svg class="icon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-arrow-left"></use></svg> All projects
+        </a>
+        <h1 class="subhero__title">Attendance Management System</h1>
+        <p class="subhero__lead">
+          A web application for managing employee schedules and attendance: admins import
+          schedule and attendance data from CSV files, and admins and employees review
+          attendance history and reports over a chosen date range.
+        </p>
+        <div class="subhero__meta">
+          <span>Team project &middot; Vauldex training program</span>
+          <span>2025</span>
+          <span>Nuxt 3 &middot; Play Framework (Scala) &middot; PostgreSQL</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:var(--container-narrow)">
+        <div class="case">
+
+          <div class="case__block">
+            <h2>The problem</h2>
+            <p>
+              Tracking employee attendance against assigned schedules by hand is slow and
+              error-prone: schedules live in spreadsheets, attendance logs come from a
+              separate source, and answering &ldquo;who was late last month?&rdquo; means
+              cross-referencing files. The system needed to take the existing CSV exports,
+              store them in one place, and let both administrators and employees see clear
+              attendance history without manual lookups.
+            </p>
+          </div>
+
+          <div class="case__block">
+            <h2>What it does</h2>
+            <ul>
+              <li>Administrators upload employee <strong>schedules</strong> and <strong>attendance</strong> records as CSV files in a defined format.</li>
+              <li>The system stores and links that data in PostgreSQL and exposes it through a REST API.</li>
+              <li>Administrators view attendance history for all employees and generate an <strong>attendance report</strong> for a chosen start and end date.</li>
+              <li>Employees log in and see only their own attendance history for a date range.</li>
+              <li>Access is separated by role: administrator and employee views have different navigation and permitted endpoints.</li>
+            </ul>
+          </div>
+
+          <div class="case__block">
+            <h2>My contribution</h2>
+            <p>
+              This was a team project during the Vauldex pre-employment training program.
+              Working with the team, I contributed to building interfaces with Vue and
+              Nuxt, worked on backend services in Play Framework (Scala), and helped
+              implement features around user authentication, attendance tracking and
+              reporting, as well as frontend&ndash;backend integration.
+            </p>
+            <p class="note">
+              A more detailed, verified breakdown of the specific modules I owned is being
+              finalised and will be added here.
+            </p>
+          </div>
+
+          <div class="case__block">
+            <h2>Technology</h2>
+            <p class="text-muted" style="font-size:var(--fs-sm);margin-bottom:.6rem">Frontend</p>
+            <div class="chip-set">
+              <span class="chip">Nuxt 3</span><span class="chip">Vue 3</span><span class="chip">TypeScript</span>
+              <span class="chip">Tailwind CSS</span><span class="chip">Vitest</span>
+            </div>
+            <p class="text-muted" style="font-size:var(--fs-sm);margin:1rem 0 .6rem">Backend</p>
+            <div class="chip-set">
+              <span class="chip">Play Framework 3</span><span class="chip">Scala 3</span>
+              <span class="chip">Play-Slick + Evolutions</span><span class="chip">JWT</span>
+              <span class="chip">bcrypt</span><span class="chip">Play Mailer</span>
+              <span class="chip">ScalaTest</span><span class="chip">Mockito</span>
+            </div>
+            <p class="text-muted" style="font-size:var(--fs-sm);margin:1rem 0 .6rem">Database</p>
+            <div class="chip-set"><span class="chip">PostgreSQL</span></div>
+          </div>
+
+          <div class="case__block">
+            <h2>Key technical decisions</h2>
+            <ul>
+              <li><strong>CSV as the import format.</strong> The source data already existed as spreadsheet exports, so schedule and attendance ingestion was built around uploading and validating CSV files rather than manual data entry.</li>
+              <li><strong>Separate client and API.</strong> A Nuxt 3 frontend and a Play (Scala) REST API are deployed independently and communicate over HTTP, keeping the UI and the data layer decoupled.</li>
+              <li><strong>JWT sessions with role separation.</strong> Authentication issues a JWT; routes are grouped into administrator and employee scopes, and a Nuxt route middleware guards pages on the client side to match.</li>
+              <li><strong>Slick evolutions for the schema.</strong> Database structure is versioned with Play-Slick evolutions so the schema is reproducible across environments.</li>
+              <li><strong>Passwords hashed with bcrypt.</strong> Credentials are never stored in plain text.</li>
+              <li><strong>Date-range reporting at the API.</strong> Attendance history and reports accept optional start and end parameters so filtering happens in the query, not the browser.</li>
+            </ul>
+          </div>
+
+          <div class="case__block">
+            <h2>Key functionality</h2>
+            <ul>
+              <li>Register / login / session / logout with JWT.</li>
+              <li>Admin: upload schedule CSV, upload attendance CSV, list schedules, list employees per schedule.</li>
+              <li>Admin: full attendance history and a date-ranged attendance report.</li>
+              <li>Employee: personal attendance history for a date range.</li>
+              <li>Role-aware navigation (separate admin and employee sidebars) and toast notifications for upload results.</li>
+              <li>Unit tests on the client for upload components, the auth middleware, and the history/report pages.</li>
+            </ul>
+          </div>
+
+          <div class="case__block">
+            <h2>Architecture</h2>
+            <div class="featured__diagram" role="img" aria-label="Nuxt 3 client calls a Play Framework REST API over HTTP with a JWT; the API reads and writes a PostgreSQL database managed with Slick evolutions; Play Mailer sends email.">
+              <div class="pipeline">
+                <div class="pipeline__row">
+                  <span class="pipeline__node">Nuxt 3 client</span>
+                  <svg class="icon pipeline__arrow" aria-hidden="true"><use href="../../assets/img/icons.svg#i-arrow-right"></use></svg>
+                  <span class="pipeline__node">HTTP + JWT</span>
+                  <svg class="icon pipeline__arrow" aria-hidden="true"><use href="../../assets/img/icons.svg#i-arrow-right"></use></svg>
+                  <span class="pipeline__node">Play (Scala) REST API</span>
+                  <svg class="icon pipeline__arrow" aria-hidden="true"><use href="../../assets/img/icons.svg#i-arrow-right"></use></svg>
+                  <span class="pipeline__node">PostgreSQL</span>
+                </div>
+                <div class="pipeline__row">
+                  <span class="pipeline__node">Play Mailer</span>
+                  <svg class="icon pipeline__arrow" aria-hidden="true"><use href="../../assets/img/icons.svg#i-arrow-right"></use></svg>
+                  <span class="pipeline__node">Email (SMTP)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="case__block">
+            <h2>Screenshots</h2>
+            <p class="note">
+              The live deployment is behind a login. A walkthrough and screenshots are
+              available on request &mdash; please get in touch.
+            </p>
+          </div>
+
+          <div class="case__block">
+            <h2>Links</h2>
+            <div class="case__links">
+              <a class="btn btn--secondary btn--sm" href="https://gitlab.com/zymith1234/ams-client" target="_blank" rel="noopener">
+                <svg class="icon btn__icon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-gitlab"></use></svg> Frontend repo
+              </a>
+              <a class="btn btn--secondary btn--sm" href="https://gitlab.com/zymith1234/ams-api" target="_blank" rel="noopener">
+                <svg class="icon btn__icon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-gitlab"></use></svg> Backend repo
+              </a>
+              <a class="btn btn--secondary btn--sm" href="https://ams-client-nine.vercel.app/login" target="_blank" rel="noopener">
+                <svg class="icon btn__icon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-external"></use></svg> Live demo (login required)
+              </a>
+            </div>
+          </div>
+
+          <p><a class="inline-link" href="../../#projects">&larr; Back to all projects</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__bottom" style="border:0;margin:0;padding:0">
+        <p>&copy; <span id="year">2026</span> Jerwin Babatugon. Built with HTML, CSS &amp; JavaScript &middot; deployed on GitLab Pages.</p>
+        <div class="site-footer__socials">
+          <a href="https://github.com/zymith123" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-github"></use></svg></a>
+          <a href="https://gitlab.com/zymith1234" target="_blank" rel="noopener" aria-label="GitLab"><svg class="icon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-gitlab"></use></svg></a>
+          <a href="https://www.linkedin.com/in/jerwin-babatugon" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-linkedin"></use></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

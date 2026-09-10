@@ -1,67 +1,49 @@
-![Build Status](https://gitlab.com/pages/plain-html/badges/master/build.svg)
+# Jerwin Babatugon — Portfolio
 
----
+Personal portfolio: **Software Developer & AI Automation Builder**.
 
-Example plain HTML site using GitLab Pages.
+Static site — plain HTML, CSS and JavaScript, no build step. Deployed with GitLab
+Pages at <https://zymith1234.gitlab.io/jerwin-full-stack-dev/>.
 
-Learn more about GitLab Pages at https://pages.gitlab.io and the official
-documentation https://docs.gitlab.com/ce/user/project/pages/.
-
----
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [GitLab CI](#gitlab-ci)
-- [GitLab User or Group Pages](#gitlab-user-or-group-pages)
-- [Did you fork this project?](#did-you-fork-this-project)
-- [Troubleshooting](#troubleshooting)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## GitLab CI
-
-This project's static Pages are built by [GitLab CI][ci], following the steps
-defined in [`.gitlab-ci.yml`](.gitlab-ci.yml):
+## Structure
 
 ```
-image: alpine:latest
-
-pages:
-  stage: deploy
-  script:
-  - echo 'Nothing to do...'
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
+public/
+  index.html                     Home (single-page scroll)
+  automation/index.html          AI automation landing page
+  projects/
+    attendance-management-system/
+    budget-tracking-app/
+    job-discovery-automation/     (in development)
+    course-booking-app/
+  404.html
+  robots.txt · sitemap.xml · site.webmanifest
+  assets/
+    css/styles.css               One stylesheet: tokens → base → components → sections
+    js/main.js                    Nav, theme toggle, scrollspy, reveal, contact form
+    img/icons.svg                 Inline SVG icon sprite (referenced via <use>)
+    fonts/inter-variable.woff2    Self-hosted Inter (SIL OFL 1.1, see OFL.txt)
+    cv/Jerwin-Babatugon-CV.pdf
 ```
 
-The above example expects to put all your HTML files in the `public/` directory.
+## Local preview
 
-## GitLab User or Group Pages
+No dependencies. Serve `public/` with any static server:
 
-To use this project as your user/group website, you will need one additional
-step: just rename your project to `namespace.gitlab.io`, where `namespace` is
-your `username` or `groupname`. This can be done by navigating to your
-project's **Settings**.
+```bash
+cd public
+python -m http.server 8080
+# open http://localhost:8080/
+```
 
-Read more about [user/group Pages][userpages] and [project Pages][projpages].
+## Deploy
 
-## Did you fork this project?
+Push to `master`. `.gitlab-ci.yml` publishes `public/` as the Pages artifact — there
+is no build stage.
 
-If you forked this project for your own use, please go to your project's
-**Settings** and remove the forking relationship, which won't be necessary
-unless you want to contribute back to the upstream project.
+## Notes
 
-## Troubleshooting
-
-1. CSS is missing! That means that you have wrongly set up the CSS URL in your
-   HTML files. Have a look at the [index.html] for an example.
-
-[ci]: https://about.gitlab.com/gitlab-ci/
-[index.html]: https://gitlab.com/pages/plain-html/blob/master/public/index.html
-[userpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#user-or-group-pages
-[projpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#project-pages
+- Theme: dark by default; light theme via the toggle; choice persisted in `localStorage`.
+- Contact form posts to [Web3Forms](https://web3forms.com/) (public access key).
+- Icons: [Lucide](https://lucide.dev/) (ISC), bundled into `assets/img/icons.svg`.
+- Font: [Inter](https://rsms.me/inter/) (SIL Open Font License 1.1).

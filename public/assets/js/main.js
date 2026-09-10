@@ -1,200 +1,208 @@
-/* ===== Show and Hide Menu ===== */
-const navMenu = document.getElementById('nav-menu') 
-const navToggle = document.getElementById('nav-toggle')
-const navClose = document.getElementById('nav-close')
+/* =============================================================================
+   Jerwin Babatugon — Portfolio. Vanilla, dependency-free.
+   ========================================================================== */
+(function () {
+  "use strict";
 
-/* ===== Show Menu ===== */
-if (navToggle){
-	navToggle.addEventListener('click', () => {
-		navMenu.classList.add('show-menu')
-	})
-}
+  var root = document.documentElement;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/* ===== Close Menu ====== */
-if(navClose){
-	navClose.addEventListener('click', () => {
-		navMenu.classList.remove('show-menu')
-	})
-}
+  /* ---------- Theme toggle ---------- */
+  var themeToggle = document.getElementById("theme-toggle");
+  function currentTheme() {
+    return root.getAttribute("data-theme") === "light" ? "light" : "dark";
+  }
+  function setPressed() {
+    if (themeToggle) themeToggle.setAttribute("aria-pressed", String(currentTheme() === "light"));
+  }
+  setPressed();
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      var next = currentTheme() === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute("content", next === "light" ? "#ffffff" : "#0b0c0f");
+      setPressed();
+    });
+  }
 
-/* ===== Remove Menu Mobile ===== */
-const navLink = document.querySelectorAll('.nav_link')
+  /* ---------- Mobile navigation ---------- */
+  var navToggle = document.getElementById("nav-toggle");
+  var nav = document.getElementById("primary-nav");
+  var lastFocused = null;
 
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
+  function openNav() {
+    nav.setAttribute("data-open", "true");
+    navToggle.setAttribute("aria-expanded", "true");
+    navToggle.setAttribute("aria-label", "Close menu");
+    lastFocused = document.activeElement;
+    var first = nav.querySelector("a, button");
+    if (first) first.focus();
+    document.addEventListener("keydown", onNavKeydown);
+  }
+  function closeNav(restore) {
+    nav.removeAttribute("data-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Open menu");
+    document.removeEventListener("keydown", onNavKeydown);
+    if (restore && lastFocused) lastFocused.focus();
+  }
+  function onNavKeydown(e) {
+    if (e.key === "Escape") { closeNav(true); return; }
+    if (e.key !== "Tab") return;
+    var focusables = nav.querySelectorAll("a, button");
+    if (!focusables.length) return;
+    var first = focusables[0], last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+  if (navToggle && nav) {
+    navToggle.addEventListener("click", function () {
+      if (nav.getAttribute("data-open") === "true") closeNav(true); else openNav();
+    });
+    nav.addEventListener("click", function (e) {
+      if (e.target.closest("a")) closeNav(false);
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 860) closeNav(false);
+    });
+  }
 
-/* ===== Skills ===== */
-const skillsContent = document.getElementsByClassName('skills_content')
-const skillsHeader = document.querySelectorAll('.skills_header')
+  /* ---------- Header shadow on scroll ---------- */
+  var header = document.getElementById("site-header");
+  if (header) {
+    var setScrolled = function () {
+      header.setAttribute("data-scrolled", String(window.scrollY > 8));
+    };
+    setScrolled();
+    window.addEventListener("scroll", setScrolled, { passive: true });
+  }
 
-function toggleSkills(){
-	let itemClass = this.parentNode.className
-	
-	for (i = 0; i < skillsContent.length; i++) {
-		skillsContent[i].className = "skills_content skills_close"
-	}
-	
-	if (itemClass === 'skills_content skills_close') {
-		this.parentNode.className = 'skills_content skills_open'
-	}
-}
+  /* ---------- Scrollspy for nav links ---------- */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav__link[href^="#"]'));
+  var sections = navLinks
+    .map(function (l) { return document.getElementById(l.getAttribute("href").slice(1)); })
+    .filter(Boolean);
 
-skillsHeader.forEach((n)=>{
-	n.addEventListener('click',toggleSkills)
-})
+  if (sections.length && "IntersectionObserver" in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = entry.target.id;
+        navLinks.forEach(function (l) {
+          l.toggleAttribute("aria-current", l.getAttribute("href") === "#" + id);
+          if (l.getAttribute("href") === "#" + id) l.setAttribute("aria-current", "true");
+        });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
 
-/* ===== Qualification tabs ===== */
-const tabs = document.querySelectorAll('[data-target]')
-const tabContents = document.querySelectorAll('[data-content]')
-
-tabs.forEach(tab =>{
-	
-	tab.addEventListener('click', () => {
-		const target = document.querySelector(tab.dataset.target)
-		
-		tabContents.forEach(tabContent => {
-			tabContent.classList.remove('qualification_active')
-		})
-		target.classList.add('qualification_active')
-		tabs.forEach(tab => {
-			tab.classList.remove('qualification_active')
-		})
-		tab.classList.add('qualification_active')
-	})
-}) 
-
-/* ====== Services modal ===== */
-
-const modalViews = document.querySelectorAll('.services_modal'),
-	  modalBtns = document.querySelectorAll('.services_button'),
-	  modalCloses = document.querySelectorAll('.services_modal')
-
-let modal = function(modalClick) {
-	modalViews[modalClick].classList.add('active-modal')
-}
-modalBtns.forEach((modalBtn, i) => {
-	/*console.log(modalBtn)
-	console.log(i)*/
-	modalBtn.addEventListener('click', () => {
-		modal(i)
-	})
-})
-
-modalCloses.forEach((modalClose) => {
-	modalClose.addEventListener('click', () => {
-		modalViews.forEach((modalView) => {
-			modalView.classList.remove('active-modal')
-		})
-	})
-})
-
-/* ===== swiper portfolio===== */
-let swiperPortfolio = new Swiper(".portfolio_container", {
-    cssMode: true,
-    loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
-
-/* ===== swiper testimonial===== */
-let swiperTestimonial = new Swiper(".testimonial_container", {
-    loop: true,
-    grabCursor: true,
-    spaceBetween: 48,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-    },
-    breakpoints: {
-    	568: {
-    		slidesPerView: 2,
-    	}
-    }
-});
-
-/* ===== Scroll Section Active Link ===== */
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive(){
-	const scrollY = window.pageYOffset;
-	sections.forEach(sec=>{
-		const sectionHeight = sec.offsetHeight
-        const sectionTop = sec.offsetTop - 50
-        sectionId = '.'+sec.getAttribute('id')+'_nav'
-
-		if((scrollY > sectionTop) && (scrollY < (sectionTop + sectionHeight))){
-			document.querySelector(sectionId).classList.add('active-link')
-		}else{
-            document.querySelector(sectionId).classList.remove('active-link')
+  /* ---------- Reveal on scroll ---------- */
+  var revealables = document.querySelectorAll(".reveal");
+  var revealAll = function () {
+    revealables.forEach(function (el) { el.classList.add("is-visible"); });
+  };
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealAll();
+  } else {
+    var revObs = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
         }
-	})	
-}
+      });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    revealables.forEach(function (el) { revObs.observe(el); });
+    // Safety net: never leave content hidden (e.g. observer/transition edge cases).
+    setTimeout(revealAll, 2500);
+    window.addEventListener("pageshow", revealAll);
+  }
 
-window.addEventListener('scroll', scrollActive);
+  /* ---------- Footer year ---------- */
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-/* ===== Change background ===== */
+  /* ---------- Contact form ---------- */
+  var form = document.getElementById("contact-form");
+  if (form) {
+    var statusEl = document.getElementById("cf-status");
+    var submitBtn = document.getElementById("cf-submit");
 
-function scrollHeader(){
-    const nav = document.getElementById('header')
-    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
+    var setError = function (id, msg) {
+      var input = document.getElementById(id);
+      var err = document.getElementById(id + "-err");
+      if (err) err.textContent = msg || "";
+      if (input) {
+        if (msg) input.setAttribute("aria-invalid", "true");
+        else input.removeAttribute("aria-invalid");
+      }
+      return !msg;
+    };
 
-/*==================== SHOW SCROLL TOP ====================*/ 
-function scrollUp(){
-    const scrollUp = document.getElementById('scroll-up');
-    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if(this.scrollY >= 500) { 
-    	scrollUp.classList.add('show-scroll'); 
-    } else { 
-    	scrollUp.classList.remove('show-scroll')
-    }
-}
+    var validate = function () {
+      var ok = true;
+      var name = form.name.value.trim();
+      var email = form.email.value.trim();
+      var msg = form.message.value.trim();
+      ok = setError("cf-name", name ? "" : "Please enter your name.") && ok;
+      ok = setError("cf-email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? "" : "Please enter a valid email.") && ok;
+      ok = setError("cf-msg", msg.length >= 10 ? "" : "Please enter a short message (at least 10 characters).") && ok;
+      return ok;
+    };
 
-window.addEventListener('scroll', scrollUp)
+    var showStatus = function (state, text) {
+      statusEl.hidden = false;
+      statusEl.setAttribute("data-state", state);
+      statusEl.textContent = text;
+    };
 
-/* ===== Dark Light Theme ===== */
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (form.botcheck && form.botcheck.value) return; // honeypot
+      if (!validate()) return;
 
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'uil-sun'
+      submitBtn.disabled = true;
+      var original = submitBtn.textContent;
+      submitBtn.textContent = "Sending…";
 
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
+      fetch(form.action, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form)
+      })
+        .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+        .then(function (res) {
+          if (res.ok) {
+            form.reset();
+            showStatus("ok", "Thanks — your message has been sent. I'll reply by email.");
+          } else {
+            showStatus("error", (res.d && res.d.message) || "Something went wrong. Please email jerbabats@gmail.com instead.");
+          }
+        })
+        .catch(function () {
+          showStatus("error", "Network error. Please email jerbabats@gmail.com instead.");
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = original;
+        });
+    });
+  }
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
-
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-} else {
-	document.body.classList['add'](darkTheme)
-	themeButton.classList['add'](iconTheme)
-}
-
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
+  /* ---------- Scroll-snap gallery (case-study pages) ---------- */
+  document.querySelectorAll(".gallery").forEach(function (gallery) {
+    var track = gallery.querySelector(".gallery__track");
+    var prev = gallery.querySelector('[data-gallery="prev"]');
+    var next = gallery.querySelector('[data-gallery="next"]');
+    if (!track) return;
+    var step = function () {
+      var fig = track.querySelector("figure");
+      return fig ? fig.getBoundingClientRect().width + 16 : track.clientWidth;
+    };
+    if (prev) prev.addEventListener("click", function () { track.scrollBy({ left: -step(), behavior: reduceMotion ? "auto" : "smooth" }); });
+    if (next) next.addEventListener("click", function () { track.scrollBy({ left: step(), behavior: reduceMotion ? "auto" : "smooth" }); });
+  });
+})();

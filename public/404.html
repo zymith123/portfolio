@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — Jerwin Babatugon</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="/jerwin-full-stack-dev/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/jerwin-full-stack-dev/assets/css/styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+      try {
+      var t = localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+    } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+  </script>
+</head>
+<body>
+  <main id="main" class="section" style="min-height:70vh;display:grid;place-items:center;text-align:center">
+    <div class="container" style="max-width:32rem">
+      <p class="section__eyebrow">404</p>
+      <h1 class="section__title">This page doesn&rsquo;t exist</h1>
+      <p class="section__subtitle">The link may be broken or the page may have moved.</p>
+      <p style="margin-top:2rem">
+        <a class="btn btn--primary" href="/jerwin-full-stack-dev/">
+          Go to homepage
+          <svg class="icon btn__icon" aria-hidden="true"><use href="/jerwin-full-stack-dev/assets/img/icons.svg#i-arrow-right"></use></svg>
+        </a>
+      </p>
+    </div>
+  </main>
+</body>
+</html>

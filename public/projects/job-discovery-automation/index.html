@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AI-Powered Job Discovery Automation — Case Study — Jerwin Babatugon</title>
+  <meta name="description" content="Case study (in development): an n8n automation that scrapes OnlineJobs.ph with Apify, uses AI to score each role for fit and draft a cover letter, and stores results in Google Sheets.">
+  <meta name="author" content="Jerwin Babatugon">
+  <link rel="canonical" href="https://zymith1234.gitlab.io/jerwin-full-stack-dev/projects/job-discovery-automation/">
+
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI-Powered Job Discovery Automation — Case Study (In Development)">
+  <meta property="og:description" content="n8n + Apify + AI: scrape job listings, score each for fit, and draft a tailored cover letter.">
+  <meta property="og:url" content="https://zymith1234.gitlab.io/jerwin-full-stack-dev/projects/job-discovery-automation/">
+  <meta property="og:image" content="https://zymith1234.gitlab.io/jerwin-full-stack-dev/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://zymith1234.gitlab.io/jerwin-full-stack-dev/assets/img/og-image.jpg">
+
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+
+  <link rel="preload" href="../../assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+      try {
+      var t = localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+    } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../../" aria-label="Jerwin Babatugon — home">
+        <span class="brand__mark" aria-hidden="true">J</span><span>Jerwin&nbsp;Babatugon</span>
+      </a>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../../#about">About</a></li>
+          <li><a class="nav__link" href="../../#experience">Experience</a></li>
+          <li><a class="nav__link" href="../../#projects" aria-current="true">Projects</a></li>
+          <li><a class="nav__link" href="../../#automation">Automation</a></li>
+          <li><a class="nav__link" href="../../#services">Services</a></li>
+          <li><a class="nav__link" href="../../#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta-mobile" href="../../#contact">Let&rsquo;s talk</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn--primary btn--sm nav__cta-desktop" href="../../#contact">Let&rsquo;s talk</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-moon"></use></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="../../assets/img/icons.svg#i-sun"></use></svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="icon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="subhero">
+      <div class="container">
+        <a class="subhero__back" href="../../#projects">
+          <svg class="icon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-arrow-left"></use></svg> All projects
+        </a>
+        <h1 class="subhero__title" style="display:flex;flex-wrap:wrap;align-items:center;gap:.75rem">
+          AI-Powered Job Discovery Automation
+          <span class="badge badge--dev">In Development</span>
+        </h1>
+        <p class="subhero__lead">
+          A personal automation that finds relevant job listings, uses AI to judge how well
+          each one fits and explain why, then drafts a tailored cover letter &mdash; so the
+          manual part of a job search comes down to reviewing and sending. Built as a
+          prototype on an n8n trial; some of the pipeline is still being built.
+        </p>
+        <div class="subhero__meta">
+          <span>Personal project</span>
+          <span>2025 &ndash; present</span>
+          <span>n8n &middot; Apify &middot; Google Gemini &middot; Google Sheets</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:var(--container-narrow)">
+        <div class="case">
+
+          <div class="case__block">
+            <h2>The problem</h2>
+            <p>
+              A serious job search on a site like OnlineJobs.ph means checking new listings
+              every day, reading each one to judge whether it&rsquo;s a good fit, and
+              writing a fresh cover letter for the ones that are. Most of that is repetitive
+              reading and drafting. The goal of this project is to automate the repetitive
+              part and leave a person with a short, pre-assessed list and a draft they can
+              edit and send.
+            </p>
+          </div>
+
+          <div class="case__block">
+            <h2>What I built</h2>
+            <p>
+              An n8n workflow that runs on a schedule and moves each listing through a
+              short pipeline:
+            </p>
+            <ul>
+              <li>A daily <strong>schedule trigger</strong> starts the run.</li>
+              <li>An <strong>Apify actor</strong> scrapes current OnlineJobs.ph listings.</li>
+              <li>The results are <strong>limited</strong> to a manageable batch.</li>
+              <li><strong>AI step 1 (Google Gemini)</strong> scores each job for how well it fits the applicant and returns its reasoning.</li>
+              <li><strong>AI step 2 (Google Gemini)</strong> drafts a tailored cover letter for the job.</li>
+              <li>Each row &mdash; listing, score, reasoning and draft &mdash; is written to a <strong>Google Sheet</strong>.</li>
+            </ul>
+          </div>
+
+          <div class="case__block">
+            <h2>Status</h2>
+            <div class="status-cols" style="margin-top:0">
+              <div class="status-col status-col--built">
+                <h4>Currently built</h4>
+                <ul>
+                  <li>Scheduled daily run</li>
+                  <li>Apify actor scrapes OnlineJobs.ph listings</li>
+                  <li>Result limiting</li>
+                  <li>AI scoring of job fit, with reasoning</li>
+                  <li>AI-drafted cover letter per job</li>
+                  <li>Results written to a Google Sheet</li>
+                </ul>
+              </div>
+              <div class="status-col status-col--progress">
+                <h4>In progress</h4>
+                <ul>
+                  <li>Refining the filtering and relevance logic</li>
+                </ul>
+              </div>
+              <div class="status-col status-col--planned">
+                <h4>Planned</h4>
+                <ul>
+                  <li>A dedicated database in place of the sheet</li>
+                  <li>A dashboard to browse and track roles</li>
+                  <li>Email / Telegram notifications</li>
+                  <li>Persistent hosting</li>
+                </ul>
+              </div>
+            </div>
+            <p class="note" style="margin-top:1.25rem">
+              This is a prototype built on an n8n trial. It is not running as a hosted
+              production system, and the numbers it produces have not been formally
+              evaluated.
+            </p>
+          </div>
+
+          <div class="case__block">
+            <h2>Architecture</h2>
+            <div class="featured__diagram" role="img" aria-label="A daily schedule triggers an Apify actor that scrapes OnlineJobs.ph. Results are limited, then an AI step scores each job for fit with reasoning, a second AI step drafts a cover letter, and rows are written to a Google Sheet. A database, dashboard and email or Telegram notifications are planned.">
+              <div class="pipeline">
+                <div class="pipeline__row">
+                  <span class="pipeline__node pipeline__node--built">Daily schedule</span>
+                  <svg class="icon pipeline__arrow" aria-hidden="true"><use href="../../assets/img/icons.svg#i-arrow-right"></use></svg>
+                  <span class="pipeline__node pipeline__node--built">Apify &mdash; scrape OnlineJobs.ph</span>
+                  <svg class="icon pipeline__arrow" aria-hidden="true"><use href="../../assets/img/icons.svg#i-arrow-right"></use></svg>
+                  <span class="pipeline__node pipeline__node--built">Limit results</span>
+                </div>
+                <div class="pipeline__row"><svg class="icon pipeline__arrow" aria-hidden="true"><use href="../../assets/img/icons.svg#i-chevron-down"></use></svg></div>
+                <div class="pipeline__row">
+                  <span class="pipeline__node pipeline__node--built">AI: score fit + reasoning</span>
+                  <svg class="icon pipeline__arrow" aria-hidden="true"><use href="../../assets/img/icons.svg#i-arrow-right"></use></svg>
+                  <span class="pipeline__node pipeline__node--built">AI: draft cover letter</span>
+                  <svg class="icon pipeline__arrow" aria-hidden="true"><use href="../../assets/img/icons.svg#i-arrow-right"></use></svg>
+                  <span class="pipeline__node pipeline__node--built">Google Sheet</span>
+                </div>
+                <div class="pipeline__row"><svg class="icon pipeline__arrow" aria-hidden="true"><use href="../../assets/img/icons.svg#i-chevron-down"></use></svg></div>
+                <div class="pipeline__row">
+                  <span class="pipeline__node pipeline__node--planned">Database</span>
+                  <svg class="icon pipeline__arrow" aria-hidden="true"><use href="../../assets/img/icons.svg#i-arrow-right"></use></svg>
+                  <span class="pipeline__node pipeline__node--planned">Dashboard</span>
+                  <svg class="icon pipeline__arrow" aria-hidden="true"><use href="../../assets/img/icons.svg#i-arrow-right"></use></svg>
+                  <span class="pipeline__node pipeline__node--planned">Email / Telegram alerts</span>
+                </div>
+              </div>
+              <div class="pipeline__legend">
+                <span><span class="pipeline__swatch pipeline__swatch--built"></span> Built</span>
+                <span><span class="pipeline__swatch pipeline__swatch--planned"></span> Planned</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="case__block">
+            <h2>Key technical decisions</h2>
+            <ul>
+              <li><strong>Apify for scraping.</strong> Using a managed actor keeps the fragile part &mdash; parsing a third-party site &mdash; out of the workflow logic.</li>
+              <li><strong>Two separate AI steps.</strong> Scoring and drafting are different jobs with different prompts; splitting them keeps each prompt focused and the output easy to check.</li>
+              <li><strong>Scoring returns reasoning, not just a number.</strong> A short explanation makes it possible to sanity-check the model and tune the prompt.</li>
+              <li><strong>Google Sheets as the first store.</strong> A sheet was the fastest way to see results and iterate; moving to a real database is the next step.</li>
+              <li><strong>Batch limiting.</strong> Capping how many listings are processed per run keeps API usage predictable during development.</li>
+            </ul>
+          </div>
+
+          <div class="case__block">
+            <h2>What it demonstrates</h2>
+            <p>
+              This project is the clearest example of the direction I&rsquo;m moving in:
+              combining scraping, AI and a structured data store into a workflow that
+              removes repetitive manual work. The same pattern &mdash; collect, assess with
+              AI, store, notify &mdash; applies directly to business tasks like lead
+              qualification, document triage and inbound-request routing.
+            </p>
+          </div>
+
+          <div class="case__block">
+            <h2>Links</h2>
+            <div class="case__links">
+              <span class="chip">Workflow screenshots available on request</span>
+            </div>
+          </div>
+
+          <p><a class="inline-link" href="../../#projects">&larr; Back to all projects</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__bottom" style="border:0;margin:0;padding:0">
+        <p>&copy; <span id="year">2026</span> Jerwin Babatugon. Built with HTML, CSS &amp; JavaScript &middot; deployed on GitLab Pages.</p>
+        <div class="site-footer__socials">
+          <a href="https://github.com/zymith123" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-github"></use></svg></a>
+          <a href="https://gitlab.com/zymith1234" target="_blank" rel="noopener" aria-label="GitLab"><svg class="icon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-gitlab"></use></svg></a>
+          <a href="https://www.linkedin.com/in/jerwin-babatugon" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="../../assets/img/icons.svg#i-linkedin"></use></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

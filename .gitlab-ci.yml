@@ -1,11 +1,13 @@
+# Static site — no build step. GitLab Pages publishes the `public/` directory as-is.
+# Clean URLs (dir/ -> dir/index.html) and public/404.html are handled by Pages.
 image: alpine:latest
 
 pages:
   stage: deploy
   script:
-  - echo 'Nothing to do...'
+    - echo "Static site — nothing to build. Publishing public/."
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master
