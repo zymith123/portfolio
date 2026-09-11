@@ -207,7 +207,8 @@ a.inline-link:hover { color: var(--link-hover); }
 
 ::selection { background: var(--accent); color: var(--accent-contrast); }
 
-/* icon system — <svg class="icon"><use href="assets/img/icons.svg#i-name"></use></svg> */
+/* icon system — sprite is inlined in <body> on each page (see #icon-sprite);
+   use: <svg class="icon"><use href="#i-name"></use></svg> — works under file:// too */
 .icon {
   width: 1em; height: 1em;
   flex: none;
