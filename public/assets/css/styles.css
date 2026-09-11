@@ -437,6 +437,71 @@ a.inline-link:hover { color: var(--link-hover); }
 .skill-group__label svg { width: 1.15rem; height: 1.15rem; color: var(--accent); }
 .skill-note { margin-top: var(--s-5); color: var(--text-faint); font-size: var(--fs-xs); }
 
+/* --- tech chips (icon + label), with a staggered reveal and a hover "wake up" --- */
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.7rem 0.35rem 0.4rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+  font-weight: 520;
+  line-height: 1;
+  transition: transform 220ms cubic-bezier(.16,1,.3,1), border-color 220ms ease,
+              background 220ms ease, color 220ms ease, box-shadow 220ms ease;
+}
+.tech-chip__icon {
+  display: grid;
+  place-items: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  flex: none;
+  color: var(--text-faint);
+}
+.tech-chip__icon svg {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(65%) opacity(0.82);
+  transition: filter 260ms ease, transform 320ms cubic-bezier(.34,1.56,.64,1);
+}
+.tech-chip:hover,
+.tech-chip:focus-within {
+  transform: translateY(-3px);
+  border-color: var(--accent-line);
+  background: var(--surface-2);
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
+.tech-chip:hover .tech-chip__icon svg,
+.tech-chip:focus-within .tech-chip__icon svg {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.15) rotate(-6deg);
+}
+
+/* staggered pop-in, once the parent .skill-group has been revealed.
+   --stagger is set per position below; it's read inside the higher-specificity
+   rule so the `animation` shorthand there can't silently reset the delay to 0. */
+:root.js .tech-chip { opacity: 0; transform: translateY(10px) scale(.94); }
+@keyframes tech-chip-in { to { opacity: 1; transform: none; } }
+:root.js .skill-group.is-visible .tech-chip {
+  animation: tech-chip-in 460ms cubic-bezier(.16,1,.3,1) both;
+  animation-delay: calc(var(--stagger, 0) * 35ms);
+}
+.chip-set .tech-chip:nth-child(1)  { --stagger: 0; }
+.chip-set .tech-chip:nth-child(2)  { --stagger: 1; }
+.chip-set .tech-chip:nth-child(3)  { --stagger: 2; }
+.chip-set .tech-chip:nth-child(4)  { --stagger: 3; }
+.chip-set .tech-chip:nth-child(5)  { --stagger: 4; }
+.chip-set .tech-chip:nth-child(6)  { --stagger: 5; }
+.chip-set .tech-chip:nth-child(7)  { --stagger: 6; }
+.chip-set .tech-chip:nth-child(8)  { --stagger: 7; }
+.chip-set .tech-chip:nth-child(9)  { --stagger: 8; }
+.chip-set .tech-chip:nth-child(10) { --stagger: 9; }
+.chip-set .tech-chip:nth-child(11) { --stagger: 10; }
+
 /* --- stepper (process) --- */
 .stepper { display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); counter-reset: step; }
 .step {
