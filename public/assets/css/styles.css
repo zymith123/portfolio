@@ -456,9 +456,13 @@ a.inline-link:hover { color: var(--link-hover); }
 .tech-chip__icon {
   display: grid;
   place-items: center;
-  width: 1.3rem;
-  height: 1.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   flex: none;
+  padding: 2px;
+  border-radius: 7px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   color: var(--text-faint);
 }
 .tech-chip__icon svg {
@@ -473,6 +477,11 @@ a.inline-link:hover { color: var(--link-hover); }
   background: var(--surface-2);
   color: var(--text);
   box-shadow: var(--shadow-sm);
+}
+.tech-chip:hover .tech-chip__icon,
+.tech-chip:focus-within .tech-chip__icon {
+  border-color: var(--accent-line);
+  background: var(--bg);
 }
 .tech-chip:hover .tech-chip__icon svg,
 .tech-chip:focus-within .tech-chip__icon svg {
