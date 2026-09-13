@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Crypto Paper Trading App — Case Study — Jerwin Babatugon</title>
+  <meta name="description" content="Case study: CryptoPulse, a Nuxt 3 app that streams live Binance prices and lets you paper-trade them with a virtual balance — no backend, fully client-side.">
+  <meta name="author" content="Jerwin Babatugon">
+  <link rel="canonical" href="https://zymith123.github.io/portfolio/projects/crypto-paper-trading-app/">
+
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Crypto Paper Trading App — Case Study">
+  <meta property="og:description" content="CryptoPulse — Nuxt 3, live Binance prices via WebSocket, zero backend.">
+  <meta property="og:url" content="https://zymith123.github.io/portfolio/projects/crypto-paper-trading-app/">
+  <meta property="og:image" content="https://zymith123.github.io/portfolio/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://zymith123.github.io/portfolio/assets/img/og-image.jpg">
+
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+
+  <link rel="preload" href="../../assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+      try {
+      var t = localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+    } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+  </script>
+</head>
+<body>
+  <svg id="icon-sprite" style="display:none" aria-hidden="true">
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.575.106.785-.25.785-.556 0-.274-.01-1-.015-1.964-3.196.695-3.87-1.54-3.87-1.54-.523-1.328-1.277-1.682-1.277-1.682-1.043-.714.08-.699.08-.699 1.153.081 1.76 1.184 1.76 1.184 1.025 1.756 2.69 1.249 3.345.955.104-.742.401-1.249.729-1.536-2.552-.29-5.235-1.276-5.235-5.68 0-1.255.448-2.28 1.183-3.084-.119-.29-.513-1.459.112-3.042 0 0 .965-.309 3.163 1.178a11.02 11.02 0 0 1 2.88-.387c.977.004 1.96.132 2.88.387 2.196-1.487 3.16-1.178 3.16-1.178.626 1.583.232 2.752.114 3.042.737.804 1.182 1.829 1.182 3.084 0 4.415-2.687 5.386-5.247 5.671.413.355.78 1.056.78 2.129 0 1.537-.014 2.776-.014 3.154 0 .309.207.668.79.555A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-gitlab" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="m23.55 13.03-1.32-4.08-2.62-8.06a.45.45 0 0 0-.86 0L16.13 8.9H7.87L5.25.89a.45.45 0 0 0-.86 0L1.77 8.95.45 13.03a.9.9 0 0 0 .33 1.01L12 22.28l11.22-8.24a.9.9 0 0 0 .33-1.01"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../../" aria-label="Jerwin Babatugon — home">
+        <span class="brand__mark" aria-hidden="true">J</span><span>Jerwin&nbsp;Babatugon</span>
+      </a>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../../#about">About</a></li>
+          <li><a class="nav__link" href="../../#experience">Experience</a></li>
+          <li><a class="nav__link" href="../../#projects" aria-current="true">Projects</a></li>
+          <li><a class="nav__link" href="../../#automation">Automation</a></li>
+          <li><a class="nav__link" href="../../#services">Services</a></li>
+          <li><a class="nav__link" href="../../#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta-mobile" href="../../#contact">Let&rsquo;s talk</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn--primary btn--sm nav__cta-desktop" href="../../#contact">Let&rsquo;s talk</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="subhero">
+      <div class="container">
+        <a class="subhero__back" href="../../#projects">
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg> All projects
+        </a>
+        <h1 class="subhero__title">Crypto Paper Trading App</h1>
+        <p class="subhero__lead">
+          CryptoPulse &mdash; live prices for every Binance USDT trading pair, and a
+          risk-free paper-trading portfolio to practice against them.
+        </p>
+        <div class="subhero__meta">
+          <span>Personal project</span>
+          <span>Nuxt 3 &middot; TypeScript &middot; Binance API</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:var(--container-narrow)">
+        <div class="case">
+
+          <div class="case__block">
+            <h2>The problem</h2>
+            <p>
+              Learning to trade &mdash; or just testing an idea &mdash; usually means
+              either risking real money or trusting a spreadsheet. I wanted a
+              lightweight way to watch real market prices and simulate trades against
+              them, with no risk and no setup.
+            </p>
+          </div>
+
+          <div class="case__block">
+            <h2>What I built</h2>
+            <ul>
+              <li>A live market view tracking all ~490 Binance USDT trading pairs, with search, gainers/losers counts, and the top 24h gainer.</li>
+              <li>A paper-trading account you fund with a starting virtual balance (from preset amounts or a custom one).</li>
+              <li>Buy and sell trades executed against live prices, with an equity curve chart tracking account value over time.</li>
+              <li>A performance summary &mdash; win rate, profit factor, max drawdown, average win/loss &mdash; and a full trade history.</li>
+            </ul>
+          </div>
+
+          <div class="case__block">
+            <h2>Technology</h2>
+            <div class="chip-set">
+              <span class="chip">Nuxt 3</span><span class="chip">Vue 3</span>
+              <span class="chip">TypeScript</span><span class="chip">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="case__block">
+            <h2>Key technical decisions</h2>
+            <ul>
+              <li><strong>Rendered as a pure SPA.</strong> Every meaningful piece of data &mdash; live Binance prices, the paper-trading account &mdash; is client-only, so server-rendering would just hydrate a stale, empty shell on every load. The app disables SSR entirely.</li>
+              <li><strong>No backend.</strong> Market data comes straight from Binance's public REST and WebSocket APIs from the browser; the paper-trading account (balance, open positions, closed trades) lives entirely in <code>localStorage</code>.</li>
+              <li><strong>WebSocket with a polling fallback.</strong> Live prices stream over a WebSocket connection, with a 10-second polling fallback if the socket drops, so the market view keeps updating either way.</li>
+            </ul>
+          </div>
+
+          <div class="case__block">
+            <h2>Links</h2>
+            <div class="case__links">
+              <a class="btn btn--secondary btn--sm" href="https://github.com/zymith123/jibabatugon-06042025-cryptocurrency-dashboard" target="_blank" rel="noopener">
+                <svg class="icon btn__icon" aria-hidden="true"><use href="#i-github"></use></svg> Repo
+              </a>
+              <a class="btn btn--secondary btn--sm" href="https://zymith123.github.io/jibabatugon-06042025-cryptocurrency-dashboard/" target="_blank" rel="noopener">
+                <svg class="icon btn__icon" aria-hidden="true"><use href="#i-external"></use></svg> Live demo
+              </a>
+            </div>
+          </div>
+
+          <p><a class="inline-link" href="../../#projects">&larr; Back to all projects</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__bottom" style="border:0;margin:0;padding:0">
+        <p>&copy; <span id="year">2026</span> Jerwin Babatugon. Built with HTML, CSS &amp; JavaScript &middot; deployed on GitHub Pages.</p>
+        <div class="site-footer__socials">
+          <a href="https://github.com/zymith123" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg></a>
+          <a href="https://gitlab.com/zymith1234" target="_blank" rel="noopener" aria-label="GitLab"><svg class="icon" aria-hidden="true"><use href="#i-gitlab"></use></svg></a>
+          <a href="https://www.linkedin.com/in/jerwin-babatugon" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>
