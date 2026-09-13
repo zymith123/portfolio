@@ -2,8 +2,8 @@
 
 Personal portfolio: **Software Developer & AI Automation Builder**.
 
-Static site — plain HTML, CSS and JavaScript, no build step. Deployed with GitLab
-Pages at <https://zymith1234.gitlab.io/jerwin-full-stack-dev/>.
+Static site — plain HTML, CSS and JavaScript, no build step. Deployed with GitHub
+Pages at <https://zymith123.github.io/portfolio/>.
 
 ## Structure
 
@@ -38,8 +38,9 @@ python -m http.server 8080
 
 ## Deploy
 
-Push to `master`. `.gitlab-ci.yml` publishes `public/` as the Pages artifact — there
-is no build stage.
+Push to `main`. `.github/workflows/deploy.yml` publishes `public/` straight to GitHub
+Pages via `actions/upload-pages-artifact` + `actions/deploy-pages` — there is no build
+stage. In the repo's Settings → Pages, set **Source** to **GitHub Actions**.
 
 ## Notes
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zymith1234.gitlab.io/jerwin-full-stack-dev/sitemap.xml
+Sitemap: https://zymith123.github.io/portfolio/sitemap.xml
