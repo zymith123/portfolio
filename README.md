@@ -12,10 +12,11 @@ public/
   index.html                     Home (single-page scroll)
   automation/index.html          AI automation landing page
   projects/
-    attendance-management-system/
-    budget-tracking-app/
-    job-discovery-automation/     (in development)
-    course-booking-app/
+    ai-customer-support-dashboard/
+    crypto-paper-trading-app/
+    invoice-payment-tracker-app/
+    lead-generation-automation/   (prototype, not published)
+    client-onboarding-automation/ (prototype, not published)
   404.html
   robots.txt · sitemap.xml · site.webmanifest
   assets/

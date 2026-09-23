@@ -513,18 +513,18 @@
             </div>
           </a>
 
-          <a class="card card--link project-card reveal" href="projects/job-discovery-automation/">
+          <a class="card card--link project-card reveal" href="projects/lead-generation-automation/">
             <div class="project-card__media">
-              <img src="assets/img/projects/job-discovery-automation.jpg" width="800" height="500"
-                   alt="Job Discovery Automation workflow" loading="lazy" decoding="async">
-              <span class="project-card__badge badge badge--dev">In Development</span>
+              <img src="assets/img/projects/lead-generation-automation.jpg" width="800" height="500"
+                   alt="Lead Generation Automation n8n workflow" loading="lazy" decoding="async">
+              <span class="project-card__badge badge badge--dev">Prototype</span>
               <div class="project-card__overlay">
-                <h3 class="project-card__title">AI-Powered Job Discovery Automation</h3>
+                <h3 class="project-card__title">Lead Generation Automation</h3>
                 <div class="chip-set"><span class="chip">n8n</span><span class="chip">Apify</span><span class="chip">Google Gemini</span><span class="chip">Google Sheets</span></div>
               </div>
             </div>
             <div class="project-card__body">
-              <p class="project-card__text">An automation that collects job listings on a schedule, scores each role for fit with AI and explains why, then drafts a tailored cover letter.</p>
+              <p class="project-card__text">An n8n workflow that scrapes local business leads from Google Maps, enriches them with contact details, and drafts a personalized outreach email for each one with AI.</p>
               <span class="project-card__foot">Read case study
                 <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
               </span>
@@ -593,93 +593,6 @@
         <p style="margin-top:3rem">
           <a class="inline-link" href="automation/">See the automation page &rarr;</a>
         </p>
-      </div>
-    </section>
-
-    <!-- ================= FEATURED AUTOMATION ================= -->
-    <section class="section featured" id="featured">
-      <div class="container">
-        <div class="featured__inner reveal">
-          <div class="featured__head">
-            <h2 class="featured__title">AI-Powered Job Discovery Automation</h2>
-            <span class="badge badge--dev">In Development</span>
-          </div>
-          <p class="featured__lead">
-            A personal automation that finds relevant job listings, uses AI to judge how
-            well each one fits, and drafts a tailored cover letter &mdash; so the manual
-            part of a job search is reduced to reviewing and sending. Built as a prototype
-            on an n8n trial; parts of the pipeline are still being built.
-          </p>
-
-          <div class="featured__diagram" role="img" aria-label="Pipeline: a daily schedule triggers an Apify actor that scrapes OnlineJobs.ph; results are limited, then a first AI step scores each job for fit and gives its reasoning, a second AI step drafts a cover letter, and results are written to a Google Sheet. A database, dashboard, and email or Telegram notifications are planned.">
-            <div class="pipeline">
-              <div class="pipeline__row">
-                <span class="pipeline__node pipeline__node--built">Daily schedule</span>
-                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-                <span class="pipeline__node pipeline__node--built">Apify &mdash; scrape OnlineJobs.ph</span>
-                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-                <span class="pipeline__node pipeline__node--built">Limit results</span>
-              </div>
-              <div class="pipeline__row">
-                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
-              </div>
-              <div class="pipeline__row">
-                <span class="pipeline__node pipeline__node--built">AI: score job fit + reasoning</span>
-                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-                <span class="pipeline__node pipeline__node--built">AI: draft cover letter</span>
-                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-                <span class="pipeline__node pipeline__node--built">Google Sheet</span>
-              </div>
-              <div class="pipeline__row">
-                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
-              </div>
-              <div class="pipeline__row">
-                <span class="pipeline__node pipeline__node--planned">Database</span>
-                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-                <span class="pipeline__node pipeline__node--planned">Dashboard</span>
-                <svg class="icon pipeline__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-                <span class="pipeline__node pipeline__node--planned">Email / Telegram alerts</span>
-              </div>
-            </div>
-            <div class="pipeline__legend">
-              <span><span class="pipeline__swatch pipeline__swatch--built"></span> Built</span>
-              <span><span class="pipeline__swatch pipeline__swatch--planned"></span> Planned</span>
-            </div>
-          </div>
-
-          <div class="status-cols">
-            <div class="status-col status-col--built">
-              <h4>Currently built</h4>
-              <ul>
-                <li>Scheduled daily run</li>
-                <li>Apify actor scrapes OnlineJobs.ph listings</li>
-                <li>Result limiting</li>
-                <li>AI step scores each job for fit and gives its reasoning</li>
-                <li>AI step drafts a tailored cover letter</li>
-                <li>Results written to a Google Sheet</li>
-              </ul>
-            </div>
-            <div class="status-col status-col--progress">
-              <h4>In progress</h4>
-              <ul>
-                <li>Refining the filtering and relevance logic</li>
-              </ul>
-            </div>
-            <div class="status-col status-col--planned">
-              <h4>Planned</h4>
-              <ul>
-                <li>A dedicated database in place of the sheet</li>
-                <li>A dashboard to browse and track roles</li>
-                <li>Email / Telegram notifications</li>
-                <li>Persistent hosting</li>
-              </ul>
-            </div>
-          </div>
-
-          <p style="margin-top:2rem">
-            <a class="inline-link" href="projects/job-discovery-automation/">Read the full case study &rarr;</a>
-          </p>
-        </div>
       </div>
     </section>
 
