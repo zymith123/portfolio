@@ -511,7 +511,7 @@ a.inline-link:hover { color: var(--link-hover); }
 .chip-set .tech-chip:nth-child(11) { --stagger: 10; }
 
 /* --- stepper (process) --- */
-.stepper { display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); counter-reset: step; }
+.stepper { display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); counter-reset: step; list-style: none; padding-left: 0; }
 .step {
   position: relative;
   padding: var(--s-5) var(--s-4) var(--s-4);
