@@ -812,6 +812,7 @@ a.inline-link:hover { color: var(--link-hover); }
   position: relative;
   aspect-ratio: 16 / 11;
   background: var(--surface-2);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
