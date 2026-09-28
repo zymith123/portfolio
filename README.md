@@ -17,6 +17,7 @@ public/
     invoice-payment-tracker-app/
     lead-generation-automation/   (prototype, not published)
     client-onboarding-automation/ (prototype, not published)
+    shineops/
   404.html
   robots.txt · sitemap.xml · site.webmanifest
   assets/
