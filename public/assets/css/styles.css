@@ -981,6 +981,13 @@ a.inline-link:hover { color: var(--link-hover); }
 :root.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity 500ms ease, transform 500ms ease; }
 :root.js .reveal.is-visible { opacity: 1; transform: none; }
 
+/* page-load entrance + smooth cross-page fade (progressive enhancement) */
+@keyframes hero-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.hero__grid > * { animation: hero-in 600ms ease both; }
+.hero__grid > *:nth-child(2) { animation-delay: 120ms; }
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 220ms; }
+
 /* ============================ 9. MOTION / PRINT ===================== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
