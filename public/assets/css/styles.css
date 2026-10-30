@@ -363,6 +363,8 @@ a.inline-link:hover { color: var(--link-hover); }
   letter-spacing: 0.01em;
 }
 .badge--dev { background: var(--dev-bg); color: var(--dev); border: 1px solid color-mix(in srgb, var(--dev) 40%, transparent); }
+.badge--live { background: color-mix(in srgb, var(--ok) 14%, transparent); color: var(--ok); border: 1px solid color-mix(in srgb, var(--ok) 40%, transparent); }
+.badge--live::before { content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--ok); }
 .badge--dev::before {
   content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%;
   background: var(--dev);
